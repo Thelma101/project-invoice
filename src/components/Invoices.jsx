@@ -17,7 +17,7 @@ const Invoices = () => {
                     </div>
                     <div className="flex items-center w-20 h-8 rounded-full bg-custom-btn md:w-40 md:h-12 justify-evenly bg-slate-600">
                         <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full md:h-16 md:w-16">
-                            <img src="./icon-plus.svg" alt="" className="" />
+                            +
                         </div>
                         New invoice
                     </div>
