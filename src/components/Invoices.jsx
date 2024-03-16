@@ -16,7 +16,7 @@ const Invoices = () => {
                         <img src="" alt="" style={dropdownArrowStyle} />
                     </div>
                     <div className="flex items-center w-20 h-8 rounded-full bg-custom-btn md:w-40 md:h-12 justify-evenly bg-slate-600">
-                        <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full md:h-16 md:w-16">
+                        <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full md:h-14 md:w-14">
                             +
                         </div>
                         New invoice
