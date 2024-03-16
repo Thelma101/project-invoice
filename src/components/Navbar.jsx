@@ -6,7 +6,7 @@ import sun from '../assets/icon-sun.svg';
 const Navbar = () => {
   return (
     <div className=''>
-      <div className='fixed flex flex-col h-[100%] mx-auto rounded-e-3xl w-16 bg-slate-600'>
+      <div className='fixed flex flex-col h-[100%] mx-auto rounded-e-3xl w-18 bg-slate-600'>
         <div>
           <img src={logo} />
         </div>
