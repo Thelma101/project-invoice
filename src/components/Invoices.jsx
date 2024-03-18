@@ -19,7 +19,6 @@ const Invoices = () => {
 
                         <div className="flex items-center rounded-full bg-custom-btn md:w-40 md:h-14 justify-evenly bg-[#7c5dfa]">
                             <div className="flex items-center justify-center w-6 h-6 bg-white rounded-full cursor-pointer md:h-10 md:w-10">
-
                                 <div className='text-[#7c5dfa] text-2xl cursor-pointer'>+</div>
                             </div>
                             <div className='flex items-center justify-center text-center text-white'>

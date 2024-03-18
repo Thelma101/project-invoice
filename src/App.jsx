@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 // import './App.css'
 import Navbar from './components/Navbar'
 import Invoices from './components/Invoices'
+import NewInvoice from './components/NewInvoice'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
     <Navbar />
     <Invoices />
+    <NewInvoice />
       {/* <h1 className='text-center text-teal-700 '>Hello, how you doing?</h1> */}
       
     </>
