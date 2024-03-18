@@ -65,10 +65,10 @@ const NewInvoice = () => {
 
                 {/* buttons */}
                 <div className='flex mt-8 mb-8'>
-                    <div className='flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg bg-slate-700'>
-                        <button type='cancel' onClick={clearSubmit} >Cancel</button>
+                    <div className='flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg cursor-pointer bg-slate-700' onClick={clearSubmit}>
+                        <button type='cancel' onClick={clearSubmit}> Cancel</button>
                     </div>
-                    <div className='flex flex-col w-full items-center justify-center m-2 p-3 text-white rounded-lg bg-[#7c5dfa]'>
+                    <div className='flex flex-col w-full items-center justify-center m-2 p-3 text-white rounded-lg bg-[#7c5dfa] cursor-pointer' onClick={clearSubmit}>
                         <button type='submit' onClick={handleSubmit}>Submit</button>
                     </div>
                 </div>
