@@ -22,8 +22,32 @@ const NewInvoice = () => {
         document.getElementById('addInvoice').reset();
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const checkError = {};
+        if (formData.homeAddress.length < 5) {
+            checkError.homeAddress = 'Address must be at least 5 characters';
+        }
+        if (formData.clientAddress.length < 5) {
+            checkError.homeAddress = 'Address must be at least 5 characters';
+        }
+        if (formData.country.length < 5) {
+            checkError.country = 'Country must be at least 5 characters';
+        }
+        
+        // EMAIL
+        if (!validateEmail (formInputData.email)) {
+            checkError.email = 'Invalid Format'
+            console.log('invalid email');
+        } else {
+            alert(Success)
+        }
+        
+    }
 
+    const validateEmail = (email) =>{
+        const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        regEx.test(email);
     }
 
     return (
