@@ -33,12 +33,12 @@ const Invoices = () => {
                 <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#1f2c3f] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                     <div className='flex items-center justify-between p-3'>
                         <div className='flex gap-12'>
-                            <div className='font-bold '>#</div>
+                            <div className='font-bold text-white'>#</div>
                             <div className='text-slate-400'>Due 2024-03-20 </div>
                             <div className='text-slate-500'>David Dunn</div>
                         </div>
                         <div className='flex items-center gap-4'>
-                            <div className='text-2xl font-bold'>$</div>
+                            <div className='text-2xl font-bold text-white'>$</div>
                             <div className='flex items-center justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white'>
                                 <div className='w-2 h-2 bg-green-600 rounded-full bg-custom-btn md:w-2 md:h-2 justify-evenly' />
                                 <p className='text-sm text-green-500'>Paid</p>
@@ -48,36 +48,30 @@ const Invoices = () => {
                             </div>
                         </div>
                     </div>
+                    </div>
 
-
-                    {/* <div className="hidden w-full bg-white rounded-lg md:block">
-                        <div className="flex items-center justify-between w-full p-3">
-                            <div className="flex flex-col items-center justify-start gap-2 md:flex-row md:gap-6">
-                                <p className="font-bold"><span className="text-blue-500">#</span></p>
-                            </div>
-                            <div className="flex items-center justify-center gap-5">
-                                <p className="text-2xl font-bold">$</p>
-                                <div className="flex items-center justify-end gap-3 pt-3 pb-3 pl-5 pr-6 bg-green-500 rounded-lg">
-                                    <p className="w-4 h-4 bg-green-500 rounded-full"></p>
-                                </div>
-                                <p><img src="./icon-arrow-right.svg" alt="" /></p>
-                            </div>
+                    <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#1f2c3f] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                    <div className='flex items-center justify-between p-3'>
+                        <div className='flex gap-12'>
+                            <div className='font-bold text-white'>#</div>
+                            <div className='text-slate-400'>Due 2024-03-20 </div>
+                            <div className='text-slate-500'>David Dunn</div>
                         </div>
-                    </div> */}
-                    {/* <div className="flex items-center justify-between w-full p-5 md:hidden">
-                        <div className="flex flex-col items-start justify-start gap-2 md:flex-row md:gap-6">
-                            <p className="font-bold"></p>
-                            <p className="text-sm font-bold">$</p>
-                        </div>
-                        <div className="flex flex-col items-center justify-center gap-5">
-                            <div className="flex items-center justify-end gap-3 pt-3 pb-3 pl-5 pr-6 bg-green-500 rounded-lg">
-                                <p className="w-4 h-4 bg-green-500 rounded-full"></p>
+                        <div className='flex items-center gap-4'>
+                            <div className='text-2xl font-bold text-white'>$</div>
+                            <div className='flex items-center justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white'>
+                                <div className='w-2 h-2 bg-green-600 rounded-full bg-custom-btn md:w-2 md:h-2 justify-evenly' />
+                                <p className='text-sm text-green-500'>Paid</p>
+                            </div>
+                            <div>
+                                <img src={iconArrowRight} alt="" className='flex items-center justify-center text-center' />
                             </div>
                         </div>
-                    </div> */}
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }
 
