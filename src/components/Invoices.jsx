@@ -1,4 +1,7 @@
 import React from 'react';
+import '../assets/icon-arrow-right.svg';
+import iconArrowRight from '../assets/icon-arrow-right.svg';
+import sun from '../assets/icon-sun.svg';
 
 const Invoices = () => {
     return (
@@ -35,9 +38,11 @@ const Invoices = () => {
                             <div>3</div>
                         </div>
                         <div className='flex gap-12'>
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
+                            <div>4</div>
+                            <div>Dollar bills</div>
+                            <div>
+                                <img src={iconArrowRight} alt="" className='flex items-center justify-center text-center'/>
+                            </div>
                         </div>
                     </div>
 
