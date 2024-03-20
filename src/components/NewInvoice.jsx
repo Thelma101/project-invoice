@@ -55,7 +55,7 @@ const NewInvoice = () => {
 
     return (
         <div className='flex items-center justify-center mx-auto'>
-            <form id='addInvoice'>
+            <form id='addInvoice' onSubmit={handleSubmit}>
                 <div className='flex flex-col'>
                     <p className='text-[#7c5dfa]'>Bill From</p>
                     <label className=''>Street Address </label>
