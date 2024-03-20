@@ -37,6 +37,7 @@ const Invoices = () => {
                         <div className='flex gap-12'>
                             <div>1</div>
                             <div>2</div>
+                            <div>3</div>
                         </div>
                     </div>
 
