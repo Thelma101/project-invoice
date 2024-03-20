@@ -27,14 +27,23 @@ const NewInvoice = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const checkError = {};
-        if (formInputData.homeAddress.length < 5) {
-            checkError.homeAddress = 'Address must be at least 5 characters';
+        for (const key in formInputData) {
+            if (!formInputData, key) {
+                const value = object[key];
+                checkError[value] = 'Field cannot be empty';
+            }
         }
-        if (formInputData.clientAddress.length < 5) {
-            checkError.clientAddress = 'Address must be at least 5 characters';
-        }
-        if (formInputData.country.length < 5) {
-            checkError.country = 'Country must be at least 5 characters';
+
+        // const checkError = {};
+        // for (const field in formInputData) {
+        //     if (!formInputData[field]) {
+        //         checkError[field] = 'Field cannot be empty';
+        //     }
+        
+
+       
+        if (!/^\d{1,6}$/.test(formInputData.postCode)) {
+            checkError.postCode = 'Postal code must be a number with at most 6 characters';
         }
 
         // EMAIL
