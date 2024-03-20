@@ -1,13 +1,13 @@
+
 import React from 'react';
-import '../assets/icon-arrow-right.svg';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
-import sun from '../assets/icon-sun.svg';
+
 
 const Invoices = () => {
     return (
-        <div className="flex flex-col items-center justify-center bg-[#1f2c3f]">
+        <div className="flex flex-col items-center justify-center bg-[#141625] min-h-screen ">
             <div className='justify-between w-3/5'>
-                <div className="flex items-center justify-between w-full mt-[120px] ">
+                <div className="flex items-center justify-between w-full mt-[80px] ">
                     <div className="items-center justify-between ">
                         <h2 className="text-4xl font-bold">Invoice</h2>
                         {/* <p className="hidden text-gray-500 md:block">There are 7 invoices</p>
@@ -48,9 +48,9 @@ const Invoices = () => {
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
 
-                    <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                     <div className='flex items-center justify-between p-3'>
                         <div className='flex gap-12'>
                             <div className='font-bold text-white'>#</div>
@@ -68,10 +68,9 @@ const Invoices = () => {
                             </div>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
-        // </div>
+        </div>
     );
 }
 
