@@ -20,9 +20,22 @@ const NewInvoice = () => {
         setFormInputData({ ...formInputData, [name]: value })
     }
 
+    // const clearSubmit = () => {
+    //     document.getElementById('addInvoice').reset();
+    // }
+
     const clearSubmit = () => {
-        document.getElementById('addInvoice').reset();
-    }
+        setFormInputData({
+            homeAddress: '',
+            city: '',
+            postCode: '',
+            country: '',
+            clientName: '',
+            clientAddress: '',
+            email: '',
+        });
+    };
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
