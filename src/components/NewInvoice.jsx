@@ -43,6 +43,7 @@ const NewInvoice = () => {
             console.log('invalid email');
         } else {
             alert(Success)
+            console.log("successful");
         }
 
     }
