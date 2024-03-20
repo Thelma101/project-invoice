@@ -31,7 +31,7 @@ const NewInvoice = () => {
             checkError.homeAddress = 'Address must be at least 5 characters';
         }
         if (formInputData.clientAddress.length < 5) {
-            checkError.homeAddress = 'Address must be at least 5 characters';
+            checkError.clientAddress = 'Address must be at least 5 characters';
         }
         if (formInputData.country.length < 5) {
             checkError.country = 'Country must be at least 5 characters';
@@ -42,16 +42,24 @@ const NewInvoice = () => {
             checkError.email = 'Invalid Format'
             console.log('invalid email');
         } else {
-            alert(Success)
+            alert('Success')
             console.log("successful, welcome!");
         }
 
-    }
+        setError(checkError);
 
+        if (Object.keys(checkError).length === 0) {
+            alert('Form submitted successfully');
+            // Clear the form
+            clearSubmit();
+        }
+
+    }
     const validateEmail = (email) => {
-        const regEx =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regEx.test(email);
     }
+
 
     return (
         <div className='flex items-center justify-center mx-auto'>
@@ -61,6 +69,13 @@ const NewInvoice = () => {
                     <label className=''>Street Address </label>
                     <input type='text' name='homeAddress' placeholder='8b Alignton' id='homeAddress' value={formInputData.homeAddress} onChange={handleChange} className='p-3 border-2 border-gray-700 rounded-md' />
                 </div>
+                {Object.keys(error).length > 0 && (
+                    <div className="text-red-500">
+                        {Object.values(error).map((errorMsg, index) => (
+                            <p key={index}>{errorMsg}</p>
+                        ))}
+                    </div>
+                )}
                 <div className='flex mt-8'>
                     <div className='flex flex-col pr-2'>
                         <label className=''>City </label>
@@ -92,12 +107,13 @@ const NewInvoice = () => {
 
                 {/* buttons */}
                 <div className='flex mt-8 mb-8'>
-                    <div className='flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg cursor-pointer bg-slate-700' onClick={clearSubmit}>
-                        <button type='cancel' onClick={clearSubmit}> Cancel</button>
+                    <div className='flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg cursor-pointer bg-slate-700' onClick={clearSubmit} aria-label="Cancel">
+                        <button type='cancel'>Cancel</button>
                     </div>
-                    <div className='flex flex-col w-full items-center justify-center m-2 p-3 text-white rounded-lg bg-[#7c5dfa] cursor-pointer' onClick={clearSubmit}>
-                        <button type='submit' onClick={handleSubmit}>Submit</button>
+                    <div className='flex flex-col w-full items-center justify-center m-2 p-3 text-white rounded-lg bg-[#7c5dfa] cursor-pointer' onClick={handleSubmit} aria-label="Submit">
+                        <button type='submit'>Submit</button>
                     </div>
+
                 </div>
             </form>
         </div>
