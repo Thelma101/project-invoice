@@ -5,7 +5,7 @@ import sun from '../assets/icon-sun.svg';
 
 const Invoices = () => {
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center bg-[#1f2c3f]">
             <div className='justify-between w-3/5'>
                 <div className="flex items-center justify-between w-full mt-[120px] ">
                     <div className="items-center justify-between ">
@@ -30,12 +30,12 @@ const Invoices = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto mt-10 mb-6 rounded-lg hover:cursor-pointer border-2 hover:border-[#7c5dfa] hover:border-2 justify-center">
+                <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#1f2c3f] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                     <div className='flex items-center justify-between p-3'>
                         <div className='flex gap-12'>
-                            <div><p></p>#</div>
-                            <div>Due 2024-03-20</div>
-                            <div>David Dunn</div>
+                            <div className='font-bold '>#</div>
+                            <div className='text-slate-400'>Due 2024-03-20 </div>
+                            <div className='text-slate-500'>David Dunn</div>
                         </div>
                         <div className='flex items-center gap-4'>
                             <div className='text-2xl font-bold'>$</div>
