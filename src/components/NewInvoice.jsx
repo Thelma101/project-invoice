@@ -13,6 +13,8 @@ const NewInvoice = () => {
         email: '',
     });
 
+    const [error, setError] = useState({});
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormInputData({ ...formInputData, [name]: value })
@@ -34,18 +36,18 @@ const NewInvoice = () => {
         if (formData.country.length < 5) {
             checkError.country = 'Country must be at least 5 characters';
         }
-        
+
         // EMAIL
-        if (!validateEmail (formInputData.email)) {
+        if (!validateEmail(formInputData.email)) {
             checkError.email = 'Invalid Format'
             console.log('invalid email');
         } else {
             alert(Success)
         }
-        
+
     }
 
-    const validateEmail = (email) =>{
+    const validateEmail = (email) => {
         const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         regEx.test(email);
     }
@@ -65,7 +67,7 @@ const NewInvoice = () => {
                     </div>
                     <div className='flex flex-col'>
                         <label className=''>PostCode</label>
-                        <input type='text' name='postCode'  placeholder='102105' id='postCode' value={formInputData.postCode} onChange={handleChange} className='p-3 border-2 border-gray-700 rounded-md' />
+                        <input type='text' name='postCode' placeholder='102105' id='postCode' value={formInputData.postCode} onChange={handleChange} className='p-3 border-2 border-gray-700 rounded-md' />
                     </div>
                     <div className='flex flex-col pl-2'>
                         <label className=''>Country</label>
