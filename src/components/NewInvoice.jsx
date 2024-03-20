@@ -21,16 +21,8 @@ const NewInvoice = () => {
     }
 
     const clearSubmit = () => {
-        setFormInputData({
-            homeAddress: '',
-            city: '',
-            postCode: '',
-            country: '',
-            clientName: '',
-            clientAddress: '',
-            email: '',
-        });
-    };
+        document.getElementById('addInvoice').reset();
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();

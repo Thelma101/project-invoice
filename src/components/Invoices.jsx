@@ -30,18 +30,21 @@ const Invoices = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto mt-10 mb-6 rounded-lg hover:cursor-pointer border-2 hover:border-[#7c5dfa] hover:border-2 hover:text-[#7c5dfa]">
-                    <div className='flex justify-between p-8'>
-                        <div className='flex gap-12 '>
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                        </div>
+                <div className="mx-auto mt-10 mb-6 rounded-lg hover:cursor-pointer border-2 hover:border-[#7c5dfa] hover:border-2 justify-center">
+                    <div className='flex items-center justify-between p-3'>
                         <div className='flex gap-12'>
-                            <div>4</div>
-                            <div>Dollar bills</div>
+                            <div><p></p>#</div>
+                            <div>Due 2024-03-20</div>
+                            <div>David Dunn</div>
+                        </div>
+                        <div className='flex items-center gap-4'>
+                            <div className='text-2xl font-bold'>$</div>
+                            <div className='flex items-center justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white'>
+                                <div className='w-2 h-2 bg-green-600 rounded-full bg-custom-btn md:w-2 md:h-2 justify-evenly' />
+                                <p className='text-sm text-green-500'>Paid</p>
+                            </div>
                             <div>
-                                <img src={iconArrowRight} alt="" className='flex items-center justify-center text-center'/>
+                                <img src={iconArrowRight} alt="" className='flex items-center justify-center text-center' />
                             </div>
                         </div>
                     </div>
