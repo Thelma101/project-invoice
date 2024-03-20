@@ -50,7 +50,7 @@ const NewInvoice = () => {
 
     const validateEmail = (email) => {
         const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        regEx.test(email);
+        return regEx.test(email);
     }
 
     return (
