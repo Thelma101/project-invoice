@@ -5,17 +5,17 @@ import iconArrowRight from '../assets/icon-arrow-right.svg';
 
 const Invoices = () => {
     return (
-        <div className="flex flex-col items-center justify-center bg-[#141625] min-h-screen ">
-            <div className='justify-between w-3/5'>
-                <div className="flex items-center justify-between w-full mt-[80px] ">
+        <div className="flex flex-col items-center justify-center bg-[#141625] min-h-screen">
+            <div className='justify-between w-3/5 mt-[-200px]'>
+                <div className="flex items-center justify-between w-full">
                     <div className="items-center justify-between ">
-                        <h2 className="text-4xl font-bold">Invoice</h2>
+                        <h2 className="text-4xl font-bold text-white">Invoice</h2>
                         {/* <p className="hidden text-gray-500 md:block">There are 7 invoices</p>
                     <p className="text-gray-500 md:hidden">7 invoices</p> */}
                     </div>
                     <div className="flex items-center justify-center gap-4">
                         <div className="flex items-center justify-center gap-4">
-                            <p className="hidden md:block">Filter by status</p>
+                            <p className="hidden text-white md:block">Filter by status</p>
                             {/* <p className="md:hidden">Filter</p> */}
                             <img src="" alt="" style={dropdownArrowStyle} />
                         </div>
