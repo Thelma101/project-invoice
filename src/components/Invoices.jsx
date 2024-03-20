@@ -30,7 +30,7 @@ const Invoices = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#1f2c3f] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                     <div className='flex items-center justify-between p-3'>
                         <div className='flex gap-12'>
                             <div className='font-bold text-white'>#</div>
@@ -50,7 +50,7 @@ const Invoices = () => {
                     </div>
                     </div>
 
-                    <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#1f2c3f] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                    <div className="mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                     <div className='flex items-center justify-between p-3'>
                         <div className='flex gap-12'>
                             <div className='font-bold text-white'>#</div>
