@@ -74,7 +74,6 @@ const NewInvoice = () => {
         return regEx.test(email);
     }
 
-
     return (
         <div className='hidden'>
             <div className='flex items-center justify-center mx-auto'>
