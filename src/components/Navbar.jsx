@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import avatar from '../assets/image-avatar.jpg';
-import sun from '../assets/icon-sun.svg';
+import moon from '../assets/icon-moon.svg';
 
 const Navbar = () => {
   return (
@@ -13,7 +13,7 @@ const Navbar = () => {
           </div>
           <div className='absolute flex flex-col items-center justify-center gap-4 bottom-3'>
             <div className='items'>
-              <img src={sun} />
+              <img src={moon} />
             </div>
             <div className='relative block w-24 h-[1.5px] bg-slate-400'></div>
             <div>
@@ -32,9 +32,9 @@ const Navbar = () => {
         <div className='md:mt-8 md:mb-auto md:text-center'>
           <img src={logo} alt="Logo" />
         </div>
-        <div className='justify-between md:absolute md:flex md:flex-col md:items-center md:justify-center md:gap-4 md:bottom-3'>
+        <div className='justify-between md:absolute md:flex md:flex-col md:items-center md:justify-end md:gap-4 md:bottom-3'>
           <div className='md:items'>
-            <img src={sun} alt="Sun Icon" />
+            <img src={moon} alt="Moon Icon" />
           </div>
           {/* <div className='md:relative md:block md:w-4 md:h-[1.5px] md:bg-slate-400'></div> */}
           <div>
