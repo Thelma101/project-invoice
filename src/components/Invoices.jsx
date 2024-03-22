@@ -15,8 +15,7 @@ const Invoices = () => {
                     </div>
                     <div className="flex items-center justify-center gap-4">
                         <div className="flex items-center justify-center gap-4">
-                            <p className="hidden text-white md:block">Filter by status</p>
-                            {/* <p className="md:hidden">Filter</p> */}
+                            <p className="hidden text-white md:block"> Filter <span className='hidden md:block'>  by status </span></p>
                             <img src="" alt="" style={dropdownArrowStyle} />
                         </div>
 
@@ -24,8 +23,8 @@ const Invoices = () => {
                             <div className="flex items-center justify-center w-6 h-6 bg-white rounded-full cursor-pointer md:h-10 md:w-10">
                                 <div className='text-[#7c5dfa] text-2xl cursor-pointer'>+</div>
                             </div>
-                            <div className='flex items-center justify-center text-center text-white'>
-                                New invoice
+                            <div className='flex items-center justify-center w-24 p-4 text-center text-white'>
+                                New <span className='hidden md:block'>Invoice</span> 
                             </div>
                         </div>
                     </div>
