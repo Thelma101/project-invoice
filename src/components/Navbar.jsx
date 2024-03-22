@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../assets/logo.png';
 import avatar from '../assets/image-avatar.jpg';
+import sun from '../assets/icon-sun.svg';
 import moon from '../assets/icon-moon.svg';
 
 const Navbar = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
           </div>
           <div className='absolute flex flex-col items-center justify-center gap-4 bottom-3'>
             <div className='items'>
-              <img src={moon} />
+              <img src={sun} alt="Sun Icon" />
             </div>
             <div className='relative block w-24 h-[1.5px] bg-slate-400'></div>
             <div>
@@ -26,15 +27,15 @@ const Navbar = () => {
 
 
 
-      {/* Mobile View */}\
+      {/* Mobile View */}
 
       <div className='flex justify-between md:hidden md:rounded-e-3xl md:bg-slate-600'>
         <div className='md:mt-8 md:mb-auto md:text-center'>
           <img src={logo} alt="Logo" />
         </div>
-        <div className='justify-between md:absolute md:flex md:flex-col md:items-center md:justify-end md:gap-4 md:bottom-3'>
+        <div className=' md:flex md:items-center md:gap-4 md:bottom-3'>
           <div className='md:items'>
-            <img src={moon} alt="Moon Icon" />
+            <img src={sun} alt="Sun Icon" />
           </div>
           {/* <div className='md:relative md:block md:w-4 md:h-[1.5px] md:bg-slate-400'></div> */}
           <div>
