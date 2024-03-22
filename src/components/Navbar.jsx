@@ -28,15 +28,15 @@ const Navbar = () => {
 
       {/* Mobile View */}\
 
-      <div className='flex md:hidden md:rounded-e-3xl md:w-8 md:bg-slate-600'>
+      <div className='flex justify-between md:hidden md:rounded-e-3xl md:bg-slate-600'>
         <div className='md:mt-8 md:mb-auto md:text-center'>
           <img src={logo} alt="Logo" />
         </div>
-        <div className='md:absolute md:flex md:flex-col md:items-center md:justify-center md:gap-4 md:bottom-3'>
+        <div className='justify-between md:absolute md:flex md:flex-col md:items-center md:justify-center md:gap-4 md:bottom-3'>
           <div className='md:items'>
             <img src={sun} alt="Sun Icon" />
           </div>
-          <div className='md:relative md:block md:w-4 md:h-[1.5px] md:bg-slate-400'></div>
+          {/* <div className='md:relative md:block md:w-4 md:h-[1.5px] md:bg-slate-400'></div> */}
           <div>
             <img src={avatar} alt="Avatar" className='md:w-2 md:h-12 md:rounded-full' />
           </div>
