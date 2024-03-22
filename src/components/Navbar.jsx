@@ -21,13 +21,14 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        </div>
 
 
 
 
       {/* Mobile View */}\
 
-      {/* <div className='hidden md:flex md:flex-col md:h-screen md:mx-auto md:rounded-e-3xl md:w-8 md:bg-slate-600'>
+      <div className='flex md:hidden md:rounded-e-3xl md:w-8 md:bg-slate-600'>
         <div className='md:mt-8 md:mb-auto md:text-center'>
           <img src={logo} alt="Logo" />
         </div>
@@ -39,11 +40,25 @@ const Navbar = () => {
           <div>
             <img src={avatar} alt="Avatar" className='md:w-2 md:h-12 md:rounded-full' />
           </div>
-        </div> */}
+        </div> 
       </div>
       </div>
-    // </div>
   )
 }
 
 export default Navbar;
+
+{/* <div className='flex md:hidden'>
+<div className='m'>
+  <img src={logo} alt="Logo" />
+</div>
+<div className=''>
+  <div className='md:items'>
+    <img src={sun} alt="Sun Icon" />
+  </div>
+  <div className=''></div>
+  <div>
+    <img src={avatar} alt="Avatar" className='' />
+  </div>
+</div>
+</div> */}
