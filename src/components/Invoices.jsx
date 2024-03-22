@@ -6,7 +6,7 @@ import iconArrowRight from '../assets/icon-arrow-right.svg';
 const Invoices = () => {
     return (
         <div className="flex flex-col items-center justify-center bg-[#141625] min-h-screen">
-            <div className='justify-between w-3/5 mt-[-200px]'>
+            <div className='justify-between md:w-3/5 '>
                 <div className="flex items-center justify-between w-full">
                     <div className="items-center justify-between ">
                         <h2 className="text-4xl font-bold text-white">Invoice</h2>
