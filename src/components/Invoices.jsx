@@ -34,7 +34,7 @@ const Invoices = () => {
                         <div className="flex flex-col items-center justify-between p-3 md:flex-row">
                             <div className="flex gap-12">
                                 <div className="hidden font-bold text-white md:block">#</div>
-                                <div className="text-slate-400">Due 2024-03-20 </div>
+                                <div className="flex items-start justify-start text-left text-slate-400">Due 2024-03-20 </div>
                                 <div className="text-slate-500">David Dunn</div>
                             </div>
                             <div className="flex items-start justify-start gap-4 md:items-center md:justify-center">
