@@ -2,7 +2,6 @@
 import React from 'react';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
 
-
 const Invoices = () => {
     return (
         <div className='bg-[#141625]'>
