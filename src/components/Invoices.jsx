@@ -1,11 +1,37 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
-import {  dataInvoice } from './Data';
+import { dataInvoice } from './Data';
 
 const Invoices = () => {
+    const [dataValue, setDataValue] = useState(dataInvoice)
     return (
         <div className='bg-[#141625]'>
+            {dataValue.map((item, index) =>
+            (
+                <div className="flex items-center justify-between w-full px-3">
+                    <div className="items-center justify-between ">
+                        <h2 className="text-4xl font-bold text-white">Invoice</h2>
+                        {/* <p className="hidden text-gray-500 md:block">There are 7 invoices</p>
+                    <p className="text-gray-500 md:hidden">7 invoices</p> */}
+                    </div>
+                    <div className="flex items-center justify-center gap-4">
+                        <div className="flex items-center justify-center gap-4">
+                            <p className="text-[12px] text-white w-full"> Filter <span className='hidden md:block'>  by status </span></p>
+                            <img src="" alt="" style={dropdownArrowStyle} />
+                        </div>
+
+                        <div class=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white">
+                            <div class="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
+                                +
+                            </div>
+                            <div className='flex items-center justify-center text-center text-white'>
+                                New&nbsp;<span className='hidden md:block'> Invoice</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
             <div className="flex flex-col items-center justify-center pt-20">
                 <div className='justify-between md:w-3/5 '>
                     <div className="flex items-center justify-between w-full px-3">
