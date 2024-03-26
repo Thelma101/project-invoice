@@ -14,8 +14,8 @@ const Invoices = () => {
                             <div className="hidden font-bold text-white md:block"> {value.id} </div>
                             <div className="hidden md:flex text-slate-400">Due {value.paymentDue} </div>
                             <div className=" text-slate-400 absolute flex left-[140px] md:hidden">Due {value.paymentDue} </div>
-                            <div className="hidden md:flex text-slate-500"> {value.clientName} </div>
-                            <div className="text-slate-500 absolute flex right-[140px] md:hidden">{value.clientName} </div>
+                            <div className="hidden md:flex text-slate-500"> {value.clientEmail} </div>
+                            <div className="text-slate-500 absolute flex right-[140px] md:hidden">{value.clientEmail} </div>
                         </div>
                         <div className="flex items-start justify-start gap-4 md:items-center md:justify-center">
                             <div className="hidden text-2xl font-bold text-white md:flex">$</div>
@@ -23,12 +23,12 @@ const Invoices = () => {
                             <div className="md:flex hidden items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white ">
                                 {/* <div className="hidden md:flex items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white"> */}
                                 <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
-                                <p className="text-sm text-green-500">{value.status }</p>
+                                <p className="text-sm text-green-500">{value.status}</p>
                             </div>
                             {/* <div className="flex relative right-18 mt-4 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white"> */}
                             <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
                                 <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
-                                <p className="text-sm text-green-500">Paid</p>
+                                <p className={value.status === 'paid' ? 'text-green-300' : 'text-yellow-300' }></p>
                             </div>
 
                             <div className="hidden md:block">
