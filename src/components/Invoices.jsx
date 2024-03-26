@@ -1,6 +1,7 @@
 
 import React from 'react';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
+import {  dataInvoice } from './Data';
 
 const Invoices = () => {
     return (
