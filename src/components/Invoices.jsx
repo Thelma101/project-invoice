@@ -26,9 +26,9 @@ const Invoices = () => {
                                 <p className="text-sm text-green-500">{value.status}</p>
                             </div>
                             {/* <div className="flex relative right-18 mt-4 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white"> */}
-                            <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
+                            <di v className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
                                 <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
-                                <p className={value.status === 'paid' ? 'text-green-300' : 'text-yellow-300' }></p>
+                                <p className= {value.status === 'paid' ? 'text-green-300' : 'text-yellow-300'}>{value.status} </p>
                             </div>
 
                             <div className="hidden md:block">
