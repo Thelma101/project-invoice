@@ -205,7 +205,7 @@ export const dataInvoice = [
     description: "Logo Re-design",
     paymentTerms: 7,
     clientName: "Anita Wainwright",
-    clientEmail: "",
+    clientEmail: "Anita.Wainwright@mail.com",
     status: "draft",
     senderAddress: {
       street: "19 Union Terrace",
