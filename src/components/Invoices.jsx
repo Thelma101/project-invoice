@@ -34,7 +34,7 @@ const Invoices = () => {
                         </div>
 
 
-                        <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                        <div key={value.id} className= "md:mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                             <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
                                 <div className="flex flex-col gap-12 md:flex-row">
                                     <div className="hidden font-bold text-white md:block"> {value.id} </div>
