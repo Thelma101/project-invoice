@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
 import { dataInvoice } from './Data';
+import {ThemeContext } from './context/ThemeContext';
 
 const Invoices = () => {
+    const {theme, toggleTheme} = useContext(ThemeContext);
     const [dataValue, setDataValue] = useState(dataInvoice)
     return (
         <div className='bg-[#141625]'>
