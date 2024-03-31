@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import iconArrowRight from '../assets/icon-arrow-right.svg';
 import { dataInvoice } from './Data';
