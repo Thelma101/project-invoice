@@ -1,4 +1,4 @@
-// 
+import { createContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext({
     theme: "dark",
@@ -13,5 +13,8 @@ export const Provider = ({ children }) => {
     }
 }
 
-<ThemeContext.Provider value={{ theme, toggleTheme }}></ThemeContext.Provider>
-import { ThemeContext, Provider } from "./ThemeContext";
+useEffect(()=>{
+    document.body.className = theme;
+}, [])
+{/* <ThemeContext.Provider value={{ theme, toggleTheme }}></ThemeContext.Provider>
+import { ThemeContext, Provider } from "./ThemeContext"; */}
