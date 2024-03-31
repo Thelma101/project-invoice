@@ -11,19 +11,22 @@ export const Provider = ({ children }) => {
     const toggleTheme = () =>{
         setTheme(theme === "light" ? "dark" : "light");
     }
+
+    useEffect(() => {
+        const root = window.document.documentElement;
+        root.classList.remove("dark", "light")
+        root.classList.add(theme)
+    }, [theme]);
+    
+    return (
+        <ThemeContext.Provider value = {{theme, toggleTheme}}>
+            {children}
+        </ThemeContext.Provider>
+    );
 }
 
-useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove("dark", "light")
-    root.classList.add(theme)
-}, [theme])
 
-return (
-    <ThemeContext.Provider value = {{theme, toggleTheme}}>
-        {children}
-    </ThemeContext.Provider>
-)
+
 
 // useEffect(()=>{
 //     document.body.className = theme;
