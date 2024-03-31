@@ -11,8 +11,11 @@ function App() {
 
   return (
     <>
+    <Provider>
     <Navbar />
     <Invoices />
+    </Provider>
+
     {/* <NewInvoice /> */}
       {/* <h1 className='text-center text-teal-700 '>Hello, how you doing?</h1> */}
       
