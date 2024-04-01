@@ -5,6 +5,8 @@ import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar'
 import Invoices from './components/Invoices'
 import NewInvoice from './components/NewInvoice'
+import { ThemeContext } from './components/context/ThemeContext'
+import { Provider } from './components/context/ThemeContext'
 
 function App() {
   const [count, setCount] = useState(0)

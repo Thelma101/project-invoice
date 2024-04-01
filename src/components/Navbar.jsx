@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../assets/logo.png';
 import avatar from '../assets/image-avatar.jpg';
 import sun from '../assets/icon-sun.svg';
@@ -6,6 +6,7 @@ import moon from '../assets/icon-moon.svg';
 import { ThemeContext } from './context/ThemeContext';
 
 const Navbar = () => {
+  const { theme, toggleTheme} = useContext(ThemeContext)
   return (
     <div>
       <div className='hidden md:block'>
