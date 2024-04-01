@@ -23,8 +23,8 @@ const Invoices = () => {
                                     <img src="" alt="" style={dropdownArrowStyle} />
                                 </div>
 
-                                <div class=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white">
-                                    <div class="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
+                                <div className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white">
+                                    <div className="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
                                         +
                                     </div>
                                     <div className='flex items-center justify-center text-center text-white'>
