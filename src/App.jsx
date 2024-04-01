@@ -11,14 +11,14 @@ function App() {
 
   return (
     <>
-    <Provider>
-    <Navbar />
-    <Invoices />
-    </Provider>
+      <Provider>
+        <Navbar />
+        <Invoices />
+      </Provider>
 
-    {/* <NewInvoice /> */}
+      {/* <NewInvoice /> */}
       {/* <h1 className='text-center text-teal-700 '>Hello, how you doing?</h1> */}
-      
+
     </>
   )
 }
