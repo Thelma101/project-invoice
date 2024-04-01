@@ -9,14 +9,15 @@ export const Provider = ({ children }) => {
     const [theme, setTheme] = useState("dark");
 
     const toggleTheme = () =>{
-        setTheme(theme === "light" ? "dark" : "light");
+        // setTheme(theme === "light" ? "dark" : "light");
+        setTheme(theme === "dark" ? "light" : "dark");
     }
 
-    useEffect(() => {
-        const root = window.document.documentElement;
-        root.classList.remove("dark", "light");
-        root.classList.add(theme);
-    }, [theme]);
+    // useEffect(() => {
+    //     const root = window.document.documentElement;
+    //     root.classList.remove("dark", "light");
+    //     root.classList.add(theme);
+    // }, [theme]);
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
