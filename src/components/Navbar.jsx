@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 import avatar from '../assets/image-avatar.jpg';
 import sun from '../assets/icon-sun.svg';
 import moon from '../assets/icon-moon.svg';
+import { ThemeContext } from './context/ThemeContext';
 
 const Navbar = () => {
   return (
@@ -14,7 +15,10 @@ const Navbar = () => {
           </div>
           <div className='absolute flex flex-col items-center justify-center gap-4 bottom-3'>
             <div className='items'>
-              <img src={sun} alt="Sun Icon" />
+              <button onClick={toggleTheme}>
+                {theme === 'dark' ? <img src={sun} alt="Sun Icon" /> : <img src={moon} alt="Moon Icon" />
+                }
+              </button>
             </div>
             <div className='relative block w-24 h-[1.5px] bg-slate-400'></div>
             <div>
@@ -35,7 +39,7 @@ const Navbar = () => {
         </div>
         <div className='flex items-center justify-center gap-4 mr-4'>
           <div className='items-center'>
-            <img src={sun} alt="Sun Icon" className='w-8 h-8 rounded-full'/>
+            <img src={sun} alt="Sun Icon" className='w-8 h-8 rounded-full' />
           </div>
           <div className='relative block w-[0.9px] h-20 bg-slate-400'></div>
           <div className='h-[80px] items-center flex'>
