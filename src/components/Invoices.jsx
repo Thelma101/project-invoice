@@ -51,14 +51,17 @@ const Invoices = () => {
                                 <div className="hidden text-2xl font-bold text-white md:flex">$</div>
                                 <div className="font-bold text-white absolute md:hidden mt-10 text-sm flex left-[140px]">$</div>
                                 <div className="md:flex hidden items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white ">
-                                    <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} />
-                                    <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-green-600' : 'bg-red-600'}`} />
+                                    {/* <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} /> */}
+                                    <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-green-600' : value.status === 'pending' ? 'bg-yellow-400' : 'bg-red-600'}`} />
 
-                                    <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p>
+
+                                    {/* <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p> */}
+                                    <p className={value.status === 'paid' ? 'text-text-paid' : value.status === 'pending' ? 'text-text-pending' : 'text-text-draft'}>{value.status}</p>
+
                                 </div>
                                 <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
-                                    <div className={`w-2 h-2 rounded-full justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} />
-                                    <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p>
+                                <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-green-600' : value.status === 'pending' ? 'bg-yellow-400' : 'bg-red-600'}`} />
+                                <p className={value.status === 'paid' ? 'text-text-paid' : value.status === 'pending' ? 'text-text-pending' : 'text-text-draft'}>{value.status}</p>
                                 </div>
                                 <div className="hidden md:block">
                                     <img src={iconArrowRight} alt="" className="flex items-center justify-center text-center" />
