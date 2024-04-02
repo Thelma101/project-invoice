@@ -52,7 +52,7 @@ const Invoices = () => {
                             <div className="font-bold text-white absolute md:hidden mt-10 text-sm flex left-[140px]">$</div>
                             <div className="md:flex hidden items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white ">
                                 <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
-                                <p className="text-sm text-green-500">{value.status}</p>
+                                <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p>
                             </div>
                             <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
                                 <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
