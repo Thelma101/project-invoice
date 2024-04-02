@@ -15,7 +15,7 @@ const Navbar = () => {
             <img src={logo} />
           </div>
           <div className='absolute flex flex-col items-center justify-center gap-4 bottom-3'>
-            <div className='items'>
+            <div className='items-center'>
               <button onClick={toggleTheme}>
                 {theme === "dark" ? <img src={sun} alt="Sun Icon" /> : <img src={moon} alt="Moon Icon" />
                 }
@@ -28,8 +28,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-
 
 
       {/* Mobile View */}
