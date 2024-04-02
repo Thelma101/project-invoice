@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  /* :root {
+  :root {
     --main-bg: #f1f5f9;
     --nav-bg: #ffffff;
     --text-access: #4b5563;
     --text-paid: #10b981;
     --text-pending: #ffa600;
-    --text-draft: #a2aab3;
+    --text-draft: #f12828;
     --btn-bg: #3b82f6;
     --card-bg: #ffffff;
     --total-bg: #f9fafb;
 
     --items-bg: #f3f4f6;
     --main-text:#111827;
-  } */
+  }
 
   .dark {
    --main-bg: #141625;
@@ -24,7 +24,7 @@
   --text-access: #b6a3c1;
   --text-paid: #20d297;
   --text-pending: #e6dc0f;
-  --text-draft: #e1eafd;
+  /* --text-draft: #e1eafd; */
   --btn-bg: #7c5dfa;
   --card-bg: #1e2139;
   --total-bg: #000000;
@@ -40,7 +40,7 @@
   --text-access: #b6a3c1;
   --text-paid: #33d69f;
   --text-pending: #ff9117;
-  --text-draft: #e1eafd;
+  /* --text-draft: #e1eafd; */
   --btn-bg: #7c5dfa;
   --card-bg: #f8f8fb;
   --total-bg: #374151;
