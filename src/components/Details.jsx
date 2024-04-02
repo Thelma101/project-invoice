@@ -7,7 +7,7 @@ const Details = () => {
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
             <div className='mx-auto text-gray-200 '>
-                <Link to={`'/' ${<Invoices />}`} className="flex items-center justify-center gap-2">
+                <Link to={`/`} className="flex items-center justify-center gap-2">
                     <div className='justify-center text-center'>
                         <img src={leftArrow} alt='leftpointer' className='text-[#7c5dfa]] mx-auto cursor-pointer ' />
                     </div>
