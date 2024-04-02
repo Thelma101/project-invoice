@@ -36,35 +36,37 @@ const Invoices = () => {
             </div>
 
             {dataValue.map((value, index) => (
-                <div key={value.id}  className="md:mx-48">
-                <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
-                    <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
-                        <div className="flex flex-col gap-12 md:flex-row">
-                            <div className="hidden font-bold text-white md:block ">{value.id}</div>
-                            <div className="hidden md:flex text-slate-400">Due {value.paymentDue}</div>
-                            <div className=" text-slate-400 absolute flex left-[140px] md:hidden">Due {value.paymentDue}</div>
-                            <div className="hidden md:flex text-slate-500">{value.clientEmail}</div>
-                            <div className="text-slate-500 absolute flex right-[140px] md:hidden">{value.clientEmail}</div>
+                <div key={value.id} className="md:mx-48">
+                    <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                        <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
+                            <div className="flex flex-col gap-12 md:flex-row">
+                                <div className="hidden font-bold text-white md:block ">{value.id}</div>
+                                <div className="hidden md:flex text-slate-400">Due {value.paymentDue}</div>
+                                <div className=" text-slate-400 absolute flex left-[140px] md:hidden">Due {value.paymentDue}</div>
+                                <div className="hidden md:flex text-slate-500">{value.clientEmail}</div>
+                                <div className="text-slate-500 absolute flex right-[140px] md:hidden">{value.clientEmail}</div>
+                            </div>
+
+                            <div className="flex items-start justify-start gap-4 md:items-center md:justify-center">
+                                <div className="hidden text-2xl font-bold text-white md:flex">$</div>
+                                <div className="font-bold text-white absolute md:hidden mt-10 text-sm flex left-[140px]">$</div>
+                                <div className="md:flex hidden items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white ">
+                                    <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} />
+                                    <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-green-600' : 'bg-red-600'}`} />
+
+                                    <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p>
+                                </div>
+                                <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
+                                    <div className={`w-2 h-2 rounded-full justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} />
+                                    <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p>
+                                </div>
+                                <div className="hidden md:block">
+                                    <img src={iconArrowRight} alt="" className="flex items-center justify-center text-center" />
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="flex items-start justify-start gap-4 md:items-center md:justify-center">
-                            <div className="hidden text-2xl font-bold text-white md:flex">$</div>
-                            <div className="font-bold text-white absolute md:hidden mt-10 text-sm flex left-[140px]">$</div>
-                            <div className="md:flex hidden items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white ">
-                                <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
-                                <p className="text-sm text-green-500">{value.status}</p>
-                            </div>
-                            <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
-                                <div className="w-2 h-2 bg-green-600 rounded-full md:w-2 md:h-2 justify-evenly" />
-                                <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p>
-                            </div>
-                            <div className="hidden md:block">
-                                <img src={iconArrowRight} alt="" className="flex items-center justify-center text-center" />
-                            </div>
-                        </div>
                     </div>
-
-                </div>
                 </div>
             ))}
         </div >
