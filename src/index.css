@@ -3,8 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  /* :root {
+    --main-bg: #f1f5f9;
+    --nav-bg: #ffffff;
+    --text-access: #4b5563;
+    --text-paid: #10b981;
+    --text-pending: #ffa600;
+    --text-draft: #a2aab3;
+    --btn-bg: #3b82f6;
+    --card-bg: #ffffff;
+    --total-bg: #f9fafb;
 
-
+    --items-bg: #f3f4f6;
+    --main-text:#111827;
+  } */
 
   .dark {
    --main-bg: #141625;
