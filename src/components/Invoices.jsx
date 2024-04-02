@@ -9,8 +9,8 @@ const Invoices = () => {
     return (
         <div className='bg-[#141625]'>
             <div className="flex flex-col items-center justify-center pt-20">
-                <div className='flex justify-between md:w-3/5'>
-                    <div className="flex items-center justify-between w-full px-3">
+                <div className='flex justify-between w-3/5'>
+                    <div className="flex items-center justify-between w-full">
                         <div className="items-center justify-between">
                             <h2 className="text-4xl font-bold text-white">Invoice</h2>
                             {/* <p className="hidden text-gray-500 md:block">There are 7 invoices</p>
