@@ -9,7 +9,7 @@ const Invoices = () => {
     return (
         <div className='bg-[#141625]'>
             <div className="flex flex-col items-center justify-center pt-20">
-                <div className='justify-between md:w-3/5'>
+                <div className='flex justify-between md:w-3/5'>
                     <div className="flex items-center justify-between w-full px-3">
                         <div className="items-center justify-between">
                             <h2 className="text-4xl font-bold text-white">Invoice</h2>
@@ -40,7 +40,7 @@ const Invoices = () => {
                 <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                     <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
                         <div className="flex flex-col gap-12 md:flex-row">
-                            <div className="hidden font-bold text-white md:block text-text-access">{value.id}</div>
+                            <div className="hidden font-bold text-white md:block ">{value.id}</div>
                             <div className="hidden md:flex text-slate-400">Due {value.paymentDue}</div>
                             <div className=" text-slate-400 absolute flex left-[140px] md:hidden">Due {value.paymentDue}</div>
                             <div className="hidden md:flex text-slate-500">{value.clientEmail}</div>
@@ -63,9 +63,7 @@ const Invoices = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden md:block">
-                        <img src={iconArrowRight} alt="" className='flex items-center justify-center text-center' />
-                    </div>
+
                 </div>
                 </div>
             ))}
