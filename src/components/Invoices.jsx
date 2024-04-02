@@ -8,7 +8,7 @@ const Invoices = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
     const [dataValue, setDataValue] = useState(dataInvoice);
     return (
-        <div className='bg-[#141625]'>
+        <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
                 <div className='flex justify-between w-3/5'>
                     <div className="flex items-center justify-between w-full">
@@ -37,8 +37,9 @@ const Invoices = () => {
             </div>
 
             {dataValue.map((value, index) => (
-                <div key={value.id} className="md:mx-48">
-                    <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-[#1e2139] border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                <Link to={`'/' ${value.id}`}>
+                    <div key={value.id} className="md:mx-48">
+                    <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-card-bg border-2 border-[#151d29] hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                         <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
                             <div className="flex flex-col gap-12 md:flex-row">
                                 <div className="hidden font-bold text-white md:block ">{value.id}</div>
@@ -72,6 +73,8 @@ const Invoices = () => {
 
                     </div>
                 </div>
+                </Link>
+                
             ))}
         </div >
     );
