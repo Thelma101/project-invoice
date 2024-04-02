@@ -6,7 +6,7 @@ import moon from '../assets/icon-moon.svg';
 import { ThemeContext } from './context/ThemeContext';
 
 const Navbar = () => {
-  const { theme, toggleTheme} = useContext(ThemeContext)
+  const { theme, toggleTheme } = useContext(ThemeContext)
   return (
     <div>
       <div className='hidden md:block'>
@@ -38,7 +38,10 @@ const Navbar = () => {
         </div>
         <div className='flex items-center justify-center gap-4 mr-4'>
           <div className='items-center'>
-            <img src={sun} alt="Sun Icon" className='w-8 h-8 rounded-full' />
+            <button onClick={toggleTheme}>
+              {theme === "dark" ? <img src={sun} alt="Sun Icon" /> : <img src={moon} alt="Moon Icon" />
+              }
+            </button>
           </div>
           <div className='relative block w-[0.9px] h-20 bg-slate-400'></div>
           <div className='h-[80px] items-center flex'>
