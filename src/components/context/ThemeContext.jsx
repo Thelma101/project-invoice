@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { dataInvoice } from "../Data";
 
 export const ThemeContext = createContext({
     theme: "dark",
@@ -7,6 +8,7 @@ export const ThemeContext = createContext({
 
 export const Provider = ({ children }) => {
     const [theme, setTheme] = useState("dark");
+    const [inputData, setInputData] = useState(dataInvoice);
 
     const toggleTheme = () =>{
         // setTheme(theme === "light" ? "dark" : "light");
