@@ -8,7 +8,7 @@ export const ThemeContext = createContext({
 
 export const Provider = ({ children }) => {
     const [theme, setTheme] = useState("dark");
-    const [inputData, setInputData] = useState(dataInvoice);
+    const [dataValue, setDataValue] = useState(dataInvoice);
 
     const toggleTheme = () =>{
         // setTheme(theme === "light" ? "dark" : "light");
