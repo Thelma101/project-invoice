@@ -4,6 +4,7 @@ import { dataInvoice } from "../Data";
 export const ThemeContext = createContext({
     theme: "dark",
     toggleTheme: () => {},
+    dataValue: [],
 });
 
 export const Provider = ({ children }) => {
@@ -22,7 +23,7 @@ export const Provider = ({ children }) => {
     }, [theme]);
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme, dataValue, setDataValue }}>
             {children}
         </ThemeContext.Provider>
     );
