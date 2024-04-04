@@ -32,7 +32,6 @@ export const Provider = ({ children }) => {
 
 
 
-
 // useEffect(()=>{
 //     document.body.className = theme;
 //     const root = window.document.documentElement;
