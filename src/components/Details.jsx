@@ -107,7 +107,7 @@ const Details = () => {
                                 <p>£398</p>
                             </div>
                         </div>
-                        <div className="bg-[#1e2139] rounded-b-lg h-[6rem] w-full mt-8">
+                        <div className="bg-[#070a1a] rounded-b-lg h-[6rem] w-full mt-8">
                             <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
                                 <h2 className="text-2xl font-semibold text-white">Amount</h2>
                                 <h2 className="text-2xl font-semibold text-white">£698</h2>
