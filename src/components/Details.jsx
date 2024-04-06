@@ -3,6 +3,7 @@ import leftArrow from '../assets/icon-arrow-left.svg';
 import { Link } from 'react-router-dom';
 import Invoices from './Invoices';
 
+
 const Details = () => {
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
