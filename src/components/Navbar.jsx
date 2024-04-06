@@ -31,7 +31,6 @@ const Navbar = () => {
 
 
       {/* Mobile View */}
-
       <div className='flex justify-between md:hidden bg-slate-600'>
         <div className='md:mt-8 md:mb-auto md:text-center'>
           <img src={logo} alt="Logo" />
