@@ -8,9 +8,9 @@ import { ThemeContext } from './context/ThemeContext';
 const Details = () => {
     const { id } = useParams();
     const {dataValue} = useContext(ThemeContext);
-    console.log(dataValue);
+
     const data = dataValue.find(detail => detail.id === id)
-    console.log(data);
+    
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
