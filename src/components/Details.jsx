@@ -4,11 +4,13 @@ import { Link, useParams } from 'react-router-dom';
 import Invoices from './Invoices';
 import { ThemeContext } from './context/ThemeContext';
 
+
 const Details = () => {
     const {id} = useParams();
     const dataValue = useContext(ThemeContext); 
-
-    const detailsData = dataValue.find(detail => detail.id ===id)
+console.log(dataValue);
+    const data = dataValue.find(detail => detail.id === id)
+    console.log(data);
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
@@ -26,8 +28,8 @@ const Details = () => {
                         <div className="flex items-center gap-3">
                             <h2>Status</h2>
                             <div className="flex items-center justify-end gap-3 px-3 py-2 bg-green-900 rounded-lg ">
-                                {/* <p className="text-sm font-light text-gray-300">{value.status}</p> */}
-                                <p className="text-sm font-light text-gray-300">Paid</p>
+                                {/* <p className="text-sm font-light text-gray-300">{data.id}</p> */}
+                                {/* <p className="text-sm font-light text-gray-300">Paid</p> */}
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
