@@ -7,10 +7,10 @@ import { ThemeContext } from './context/ThemeContext';
 
 const Details = () => {
     const { id } = useParams();
-    const {dataValue} = useContext(ThemeContext);
+    const { dataValue } = useContext(ThemeContext);
 
     const data = dataValue.find(detail => detail.id === id)
-    
+
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
@@ -39,9 +39,9 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
+            {/* SENDER */}
             <div className="w-full p-8 flex justify-center relative items-center mb-8 bg-[#1e2139] rounded-lg">
                 <div className="flex flex-col justify-end w-full pt-6 mx-4 pb-7">
                     <div className="flex items-center justify-between">
@@ -50,10 +50,10 @@ const Details = () => {
                             <p className="text-gray-400">{data.clientName}</p>
                         </div>
                         <div className="flex flex-col items-end justify-end text-gray-400">
-                            <p>{data.clientAddress.street}</p>
-                            <p>{dataValue.clientName}</p>
-                            <p>50032</p>
-                            <p>Nigeria</p>
+                            <p>{data.senderAddress.street}</p>
+                            <p>{data.senderAddress.city}</p>
+                            <p>{data.senderAddress.postCode}</p>
+                            <p>{data.senderAddress.country}</p>
                         </div>
                     </div>
 
@@ -68,11 +68,11 @@ const Details = () => {
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-gray-400">Bill to</div>
-                            <div className="text-[1.2rem]">providence Reaseach limited</div>
-                            <div className="font-thin text-gray-400">74, Joyce B</div>
-                            <div className="font-thin text-gray-400">Ibadan</div>
-                            <div className="font-thin text-gray-400">23401</div>
-                            <div className="font-thin text-gray-400"></div>
+                            <div className="text-[1.2rem]">{data.clientAddress.street}</div>
+                            <div className="font-thin text-gray-400">{data.clientAddress.street}</div>
+                            <div className="font-thin text-gray-400">{data.streetAddress.city}</div>
+                            <div className="font-thin text-gray-400">{data.streetAddress.postCode}</div>
+                            <div className="font-thin text-gray-400">{data.streetAddress.country}</div>
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-gray-400">Sent to</div>
