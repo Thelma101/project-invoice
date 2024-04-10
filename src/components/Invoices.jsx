@@ -5,8 +5,8 @@ import { ThemeContext } from './context/ThemeContext';
 import { Link } from 'react-router-dom';
  
 const Invoices = () => {
-    const { theme, toggleTheme } = useContext(ThemeContext);
-    const {dataValue, setDataValue} = useState(dataInvoice);
+    const { theme, toggleTheme, dataValue } = useContext(ThemeContext);
+    
     return (
         <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
