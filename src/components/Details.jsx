@@ -7,6 +7,8 @@ import { ThemeContext } from './context/ThemeContext';
 const Details = () => {
     const {id} = useParams();
     const dataValue = useContext(ThemeContext); 
+
+    const detailsData = dataValue.find(detail => detail.id ===id)
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
