@@ -68,15 +68,15 @@ const Details = () => {
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-gray-400">Bill to</div>
-                            <div className="text-[1.2rem]">{data.clientAddress.street}</div>
+                            <div className="text-[1.2rem]">{data.clientName}</div>
                             <div className="font-thin text-gray-400">{data.clientAddress.street}</div>
-                            <div className="font-thin text-gray-400">{data.streetAddress.city}</div>
-                            <div className="font-thin text-gray-400">{data.streetAddress.postCode}</div>
-                            <div className="font-thin text-gray-400">{data.streetAddress.country}</div>
+                            <div className="font-thin text-gray-400">{data.clientAddress.city}</div>
+                            <div className="font-thin text-gray-400">{data.clientAddress.postCode}</div>
+                            {/* <div className="font-thin text-gray-400">{data.clientAddress.country}</div> */}
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-gray-400">Sent to</div>
-                            <div className="col-span-5">provider@gmail.com</div>
+                            <div className="col-span-5">{data.clientEmail}</div>
                         </div>
                     </div>
                     <div className="grid bg-[#1e2139] w-full items-center pt-6 rounded-t-lg rounded-b-lg mt-20">
@@ -119,7 +119,7 @@ const Details = () => {
                         <div className="bg-[#070a1a] rounded-b-lg h-[6rem] w-full mt-8">
                             <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
                                 <h2 className="text-2xl font-semibold text-white">Amount</h2>
-                                <h2 className="text-2xl font-semibold text-white">£698</h2>
+                                <h2 className="text-2xl font-semibold text-white">£{dataValue.total}</h2>
                             </div>
                         </div>
                     </div>

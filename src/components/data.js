@@ -40,7 +40,7 @@ export const dataInvoice = [
     clientEmail: "alexgrim@mail.com",
     status: "pending",
     senderAddress: {
-      street: "19 Union Terrace",
+      street: "19 Glasglow Street",
       city: "London",
       postCode: "E1 3EZ",
       country: "United Kingdom",
