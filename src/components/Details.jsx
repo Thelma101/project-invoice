@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import leftArrow from '../assets/icon-arrow-left.svg';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Invoices from './Invoices';
-
+import { ThemeContext } from './context/ThemeContext';
 
 const Details = () => {
+    const {id} = useParams();
+    const dataValue = useContext(ThemeContext); 
     return (
         <div className='mx-32 md:mx-[300px]  mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
