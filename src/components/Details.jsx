@@ -7,7 +7,7 @@ import { ThemeContext } from './context/ThemeContext';
 
 const Details = () => {
     const { id } = useParams();
-    const dataValue = useContext(ThemeContext);
+    const {dataValue} = useContext(ThemeContext);
     console.log(dataValue);
     const data = dataValue.find(detail => detail.id === id)
     console.log(data);
