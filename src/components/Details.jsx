@@ -46,16 +46,18 @@ const Details = () => {
                 <div className="flex flex-col justify-end w-full pt-6 mx-4 pb-7">
                     <div className="flex items-center justify-between">
                         <div className="flex flex-col items-start justify-start">
-                            <h2 className="font-bold text-gray-400"># FA98C</h2>
-                            <p className="text-gray-400">providence Reaseach limited</p>
+                            <h2 className="font-bold text-gray-400">{data.id}</h2>
+                            <p className="text-gray-400">{data.clientName}</p>
                         </div>
                         <div className="flex flex-col items-end justify-end text-gray-400">
-                            <p>flat 23, Peter Odili Road</p>
-                            <p>Port Harcourt</p>
+                            <p>{data.clientAddress.street}</p>
+                            <p>{dataValue.clientName}</p>
                             <p>50032</p>
                             <p>Nigeria</p>
                         </div>
                     </div>
+
+                    {/* CLIENT */}
                     <div className="grid items-start justify-start w-full grid-cols-4 mt-10 md:grid-cols-6">
                         <div className="grid w-full col-span-2 grid-rows-5">
                             <div className="font-light text-gray-400">Invoice Date</div>
