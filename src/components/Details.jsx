@@ -61,10 +61,10 @@ const Details = () => {
                     <div className="grid items-start justify-start w-full grid-cols-4 mt-10 md:grid-cols-6">
                         <div className="grid w-full col-span-2 grid-rows-5">
                             <div className="font-light text-gray-400">Invoice Date</div>
-                            <div className="font-bold text-[1.2rem]">2023-08-19</div>
+                            <div className="font-bold text-[1.2rem]">{data.createdAt}</div>
                             <div></div>
                             <div className="font-light text-gray-400">Payment Due</div>
-                            <div className="font-bold text-[1.2rem]">2023-08-30</div>
+                            <div className="font-bold text-[1.2rem]">{data.paymentDue}</div>
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-gray-400">Bill to</div>
@@ -116,5 +116,4 @@ const Details = () => {
             );
 };
 </div>
-    )
 export default Details;
