@@ -79,42 +79,41 @@ const Details = () => {
                             <div className="col-span-5">{data.clientEmail}</div>
                         </div>
                     </div>
-                    
-                    <div className="grid bg-[#1e2139] w-full items-center pt-6 rounded-t-lg rounded-b-lg mt-20">
-                        <div className="grid grid-cols-4 md:grid-cols-8 bg-[#1e2139] mx-auto w-full pb-7">
-                            <div className="flex flex-col items-center justify-start w-full col-span-2 text-start">
-                                <h3 className="text-gray-400 text-start">Item name</h3>
-                                <p className="text-center">{data.items.name}</p>
-                            </div>
-                            <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
-                                <h3 className="text-gray-400">Qty</h3>
-                                <p>1</p>
-                            </div>
-                            <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
-                                <h3 className="text-gray-400">Item price</h3>
-                                <p>300</p>
-                            </div>
-                            <div className="flex flex-col items-center justify-start">
-                                <h3 className="text-gray-400">Total</h3>
-                                <p>£{data.items.total}</p>
-                            </div>
-                        </div>
 
-                        <div className="bg-[#070a1a] rounded-b-lg h-[6rem] w-full mt-8">
-                            <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
-                                <h2 className="text-2xl font-semibold text-white">Amount</h2>
-                                <h2 className="text-2xl font-semibold text-white">£{data.total}</h2>
+                    <div className="grid bg-[#1e2139] w-full items-center pt-6 rounded-t-lg rounded-b-lg mt-20">
+                        {data.items.map((item, index) => (
+                            <div key={index} className="grid grid-cols-4 md:grid-cols-8 bg-[#1e2139] mx-auto w-full pb-7" >
+                                <div className="flex flex-col items-center justify-start w-full col-span-2 text-start">
+                                    <h3 className="text-gray-400 text-start">Item name</h3>
+                                    <p className="text-center">{item.name}</p>
+                                </div>
+                                <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
+                                    <h3 className="text-gray-400">Qty</h3>
+                                    <p>1</p>
+                                </div>
+                                <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
+                                    <h3 className="text-gray-400">Item price</h3>
+                                    <p>300</p>
+                                </div>
+                                <div className="flex flex-col items-center justify-start">
+                                    <h3 className="text-gray-400">Total</h3>
+                                    <p>£{item.total}</p>
+                                </div>
                             </div>
+                   </div>
+                        ))};
+
+                    <div className="bg-[#070a1a] rounded-b-lg h-[6rem] w-full mt-8">
+                        <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
+                            <h2 className="text-2xl font-semibold text-white">Amount</h2>
+                            <h2 className="text-2xl font-semibold text-white">£{data.total}</h2>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    );
+            );
 }
-
-
-//         <div className="relative flex items-center justify-center w-full p-8 mb-8 rounded-lg bg-custom-base">
-
+</div>
 
 export default Details;
