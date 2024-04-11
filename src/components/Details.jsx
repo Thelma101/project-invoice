@@ -95,7 +95,7 @@ const Details = () => {
                             </div>
                             <div className="flex flex-col items-center justify-start">
                                 <h3 className="text-gray-400">Total</h3>
-                                <p>{data.total}</p>
+                                <p>£{data.items.total}</p>
                             </div>
                         </div>
                         <div className="grid grid-cols-4 md:grid-cols-8 bg-[#1e2139] mx-auto w-full pb-7">
