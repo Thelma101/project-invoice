@@ -83,7 +83,7 @@ const Details = () => {
                         <div className="grid grid-cols-4 md:grid-cols-8 bg-[#1e2139] mx-auto w-full pb-7">
                             <div className="flex flex-col items-center justify-start w-full col-span-2 text-start">
                                 <h3 className="text-gray-400 text-start">Item name</h3>
-                                <p className="text-center"></p>
+                                <p className="text-center">{items.name}</p>
                             </div>
                             <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
                                 <h3 className="text-gray-400">Qty</h3>
