@@ -23,7 +23,7 @@ const Details = () => {
                     </div>
                 </Link>
 
-                <div className="flex items-center justify-center w-full mx-auto rounded-lg md:h-16 bg-[#1e2139]">
+                <div className="flex items-center justify-center w-full mx-auto rounded-lg md:h-16 bg-main-bg">
                     <div className="flex items-center justify-between w-full mx-4">
                         <div className="flex items-center gap-3">
                             <h2>Status</h2>
@@ -42,7 +42,7 @@ const Details = () => {
             </div>
 
             {/* SENDER */}
-            <div className="w-full p-8 flex justify-center relative items-center mb-8 bg-[#1e2139] rounded-lg">
+            <div className="relative flex items-center justify-center w-full p-8 mb-8 rounded-lg bg-main-bg">
                 <div className="flex flex-col justify-end w-full pt-6 mx-4 pb-7">
                     <div className="flex items-center justify-between">
                         <div className="flex flex-col items-start justify-start">
@@ -79,8 +79,8 @@ const Details = () => {
                             <div className="col-span-5">{data.clientEmail}</div>
                         </div>
                     </div>
-                    <div className="grid bg-[#1e2139] w-full items-center pt-6 rounded-t-lg rounded-b-lg mt-20">
-                        <div className="grid bg-[#1e2139] mx-auto w-full pb-7">
+                    <div className="grid items-center w-full pt-6 mt-20 rounded-t-lg rounded-b-lg bg-main-bg">
+                        <div className="flex w-full mx-auto bg-main-bg pb-7">
                         {/* <div className="flex items-center justify-start w-full col-span-4 text-start"> */}
                             {data.items.map((item, index) => (
                                 <div key={index} className="flex items-center justify-start w-full text-start">
