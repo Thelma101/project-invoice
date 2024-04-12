@@ -79,7 +79,6 @@ const Details = () => {
                             <div className="col-span-5">{data.clientEmail}</div>
                         </div>
                     </div>
-
                     <div className="grid bg-[#1e2139] w-full items-center pt-6 rounded-t-lg rounded-b-lg mt-20">
                         <div className="grid grid-cols-4 md:grid-cols-8 bg-[#1e2139] mx-auto w-full pb-7" >
                             {data.items.map((item, index) => (
