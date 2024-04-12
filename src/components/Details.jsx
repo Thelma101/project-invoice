@@ -104,7 +104,7 @@ const Details = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="bg-[#070a1a] rounded-b-lg h-[6rem] w-full mt-8">
+                    <div className="bg-total-bg rounded-b-lg h-[6rem] w-full mt-8">
                         <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
                             <h2 className="text-2xl font-semibold text-white">{data.amount}</h2>
                             <h2 className="text-2xl font-semibold text-white">£{data.total}</h2>
