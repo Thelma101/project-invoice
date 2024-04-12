@@ -80,23 +80,22 @@ const Details = () => {
                         </div>
                     </div>
                     <div className="grid items-center w-full pt-6 mt-20 rounded-t-lg rounded-b-lg bg-main-bg">
-                        <div className="flex w-full mx-auto bg-main-bg pb-7">
-                        {/* <div className="flex items-center justify-start w-full col-span-4 text-start"> */}
+                        <div className="grid w-full grid-cols-4 mx-auto md:grid-cols-8 bg-main-bg pb-7">
                             {data.items.map((item, index) => (
-                                <div key={index} className="flex items-center justify-start w-full text-start">
-                                    <div className="flex flex-col items-center justify-start w-full col-span-4 text-start">
+                                <div key={index} className="flex items-center justify-start w-full col-span-2 text-start">
+                                    <div className="flex flex-col items-center justify-start w-full col-span-2 text-start">
                                         <h3 className="text-gray-400 text-start">Item name</h3>
                                         <p className="text-center">{item.name}</p>
                                     </div>
-                                    <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
+                                    <div className="flex-col items-center justify-start hidden col-span-1 md:flex md:col-span-2 text-start">
                                         <h3 className="text-gray-400">Qty</h3>
                                         <p>{item.quantity}</p>
                                     </div>
-                                    <div className="hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
+                                    <div className="flex-col items-center justify-start hidden col-span-1 md:flex md:col-span-2 text-start">
                                         <h3 className="text-gray-400">Item price</h3>
                                         <p>{item.price}</p>
                                     </div>
-                                    <div className="flex flex-col items-center justify-start">
+                                    <div className="flex flex-col items-center justify-start col-span-2 text-start">
                                         <h3 className="text-gray-400">Total</h3>
                                         <p>£{item.total}</p>
                                     </div>
@@ -104,6 +103,11 @@ const Details = () => {
                             ))}
                         </div>
                     </div>
+
+
+
+
+
                     <div className="bg-total-bg rounded-b-lg h-[6rem] w-full mt-8">
                         <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
                             <h2 className="text-2xl font-semibold text-white">{data.amount}</h2>
@@ -112,7 +116,7 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
