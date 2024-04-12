@@ -49,7 +49,7 @@ const Details = () => {
                             <h2 className="font-bold text-gray-400">{data.id}</h2>
                             <p className="text-gray-400">{data.clientName}</p>
                         </div>
-                        <div className="flex flex-col items-end justify-end text-gray-400">
+                        <div className="flex flex-col items-end justify-end text-main-text">
                             <p>{data.senderAddress.street}</p>
                             <p>{data.senderAddress.city}</p>
                             <p>{data.senderAddress.postCode}</p>
@@ -60,29 +60,29 @@ const Details = () => {
                     {/* CLIENT */}
                     <div className="grid items-start justify-start w-full grid-cols-4 mt-10 md:grid-cols-6">
                         <div className="grid w-full col-span-2 grid-rows-5">
-                            <div className="font-light text-gray-400">Invoice Date</div>
+                            <div className="font-light text-main-text">Invoice Date</div>
                             <div className="font-bold text-[1.2rem]">{data.createdAt}</div>
                             <div></div>
-                            <div className="font-light text-gray-400">Payment Due</div>
+                            <div className="font-light text-main-text">Payment Due</div>
                             <div className="font-bold text-[1.2rem]">{data.paymentDue}</div>
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
-                            <div className="font-light text-gray-400">Bill to</div>
+                            <div className="font-light text-main-text">Bill to</div>
                             <div className="text-[1.2rem]">{data.clientName}</div>
-                            <div className="font-thin text-gray-400">{data.clientAddress.street}</div>
-                            <div className="font-thin text-gray-400">{data.clientAddress.city}</div>
-                            <div className="font-thin text-gray-400">{data.clientAddress.postCode}</div>
+                            <div className="font-thin text-main-text">{data.clientAddress.street}</div>
+                            <div className="font-thin text-main-text">{data.clientAddress.city}</div>
+                            <div className="font-thin text-main-text">{data.clientAddress.postCode}</div>
                             {/* <div className="font-thin text-gray-400">{data.clientAddress.country}</div> */}
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
-                            <div className="font-light text-gray-400">Sent to</div>
+                            <div className="font-light textmain-text">Sent to</div>
                             <div className="col-span-5">{data.clientEmail}</div>
                         </div>
                     </div>
                     <div className="grid items-center w-full pt-6 mt-20 rounded-t-lg rounded-b-lg bg-main-bg">
                         <div className="grid w-full grid-cols-4 mx-auto md:grid-cols-8 bg-main-bg pb-7">
                             {data.items.map((item, index) => (
-                                <div key={index} className="flex items-center justify-start w-full col-span-2 text-start">
+                                <div key={index} className="items-center justify-start w-full col-span-2 grid-rows-5 text-start">
                                     <div className="flex flex-col items-center justify-start w-full col-span-2 text-start">
                                         <h3 className="text-gray-400 text-start">Item name</h3>
                                         <p className="text-center">{item.name}</p>
