@@ -80,6 +80,27 @@ const Details = () => {
                         </div>
                     </div>
 
+
+                    {/* <div class="grid bg-custom-card w-full items-center pt-6 rounded-t-lg rounded-b-lg mt-20 ">
+                        <div class="grid grid-cols-4 md:grid-cols-8  bg-custom-card   mx-auto w-full pb-7">
+                            <div class=" col-span-2 flex  flex-col items-center text-start w-full justify-start">
+                                <h3 class="text-gray-400 text-start">Item name</h3>
+                                <p class="text-center"></p>
+                            </div>
+                            <div class=" hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
+                                <h3 class="text-gray-400">Qty</h3>
+                                <p>0</p>
+                                    </div>
+                            <div class=" hidden col-span-2 md:flex md:flex-col md:items-center md:justify-start">
+                                <h3 class="text-gray-400">Item price</h3><p>0</p></div>
+                            <div class="  flex  flex-col items-center justify-start"><h3 class="text-gray-400">Total</h3>
+                                <p>£0</p></div></div><div class="bg-custom-total rounded-b-lg h-[6rem] w-full mt-8">
+                            <div class="flex justify-between items-start p-10 rounded-lg rounded-t-none ">
+                                <h2 class="text-white font-semibold text-2xl">Amount</h2>
+                                <h2 class="text-white font-semibold text-2xl"> £0</h2></div>
+                        </div>
+                    </div> */}
+
                     <div className='relative flex items-center justify-start w-full gap-10 p-8 mb-8 rounded-lg bg-main-bg'>
                         <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
