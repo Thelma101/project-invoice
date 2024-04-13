@@ -79,26 +79,30 @@ const Details = () => {
                             <div className="col-span-5">{data.clientEmail}</div>
                         </div>
                     </div>
-                    
-                    <div className="grid items-center justify-start w-full grid-cols-4 pt-6 mx-auto mt-20 rounded-t-lg rounded-b-lg md:grid-cols-6 bg-main-bg">
-                        <div className="grid w-full grid-cols-4 mx-auto md:grid-cols-8 bg-main-bg pb-7">
+
+                    <div>
+                        <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
-                                <div key={index} className="items-center justify-start w-full">
-                                    <div className="flex flex-col items-center justify-start w-full col-span-4 text-start">
+                                <div key={index} className='flex gap-10 flex-cols-4'>
+                                    <div className='' >
                                         <h3 className="text-gray-400 text-start">Item name</h3>
                                         <p className="text-center">{item.name}</p>
+
                                     </div>
-                                    <div className="flex-col items-center justify-start hidden col-span-1 md:flex md:col-span-2 text-start">
-                                        <h3 className="text-gray-400">Qty</h3>
-                                        <p>{item.quantity}</p>
+                                    <div>
+                                        <h3 className="text-gray-400 text-start">Item name</h3>
+                                        <p className="text-center">{item.name}</p>
+
                                     </div>
-                                    <div className="flex-col items-center justify-start hidden col-span-1 md:flex md:col-span-2 text-start">
-                                        <h3 className="text-gray-400">Item price</h3>
-                                        <p>{item.price}</p>
+                                    <div>
+                                        <h3 className="text-gray-400 text-start">Item name</h3>
+                                        <p className="text-center">{item.name}</p>
+
                                     </div>
-                                    <div className="flex flex-col items-center justify-start col-span-2 text-start">
-                                        <h3 className="text-gray-400">Total</h3>
-                                        <p>£{item.total}</p>
+                                    <div>
+                                        <h3 className="text-gray-400 text-start">Item name</h3>
+                                        <p className="text-center">{item.name}</p>
+
                                     </div>
                                 </div>
                             ))}
@@ -118,6 +122,7 @@ const Details = () => {
                 </div>
             </div>
         </div >
+
     );
 };
 
