@@ -83,26 +83,22 @@ const Details = () => {
                     <div>
                         <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
-                                <div key={index} className='flex gap-10 flex-cols-4'>
-                                    <div className='' >
+                                <div key={index} className="grid items-center justify-start w-full grid-cols-4 ">
+                                    <div className="">
                                         <h3 className="text-gray-400 text-start">Item name</h3>
-                                        <p className="text-center">{item.name}</p>
-
+                                        <p>{item.name}</p>
                                     </div>
-                                    <div>
-                                        <h3 className="text-gray-400 text-start">Item name</h3>
-                                        <p className="text-center">{item.name}</p>
-
+                                    <div className="">
+                                        <h3 className="text-gray-400">Qty</h3>
+                                        <p>{item.quantity}</p>
                                     </div>
-                                    <div>
-                                        <h3 className="text-gray-400 text-start">Item name</h3>
-                                        <p className="text-center">{item.name}</p>
-
+                                    <div className="">
+                                        <h3 className="text-gray-400">Item price</h3>
+                                        <p>{item.price}</p>
                                     </div>
-                                    <div>
-                                        <h3 className="text-gray-400 text-start">Item name</h3>
-                                        <p className="text-center">{item.name}</p>
-
+                                    <div className="">
+                                        <h3 className="text-gray-400">Total</h3>
+                                        <p>£{item.total}</p>
                                     </div>
                                 </div>
                             ))}
