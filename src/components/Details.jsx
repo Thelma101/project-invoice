@@ -12,7 +12,7 @@ const Details = () => {
     const data = dataValue.find(detail => detail.id === id)
 
     return (
-        <div className='mx-32 md:mx-[300px]  mt-14'>
+        <div className='mx-28 md:mx-[300px]  mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
                 <Link to={`/`} className="flex items-center justify-center gap-2">
                     <div className='justify-center text-center'>
@@ -80,7 +80,7 @@ const Details = () => {
                         </div>
                     </div>
 
-                    <div className='mt-14'>
+                    <div className='items-center w-full pt-6 mt-14'>
                         <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
                                 <div key={index} className="grid items-center justify-between w-full grid-cols-4 gap-3">
