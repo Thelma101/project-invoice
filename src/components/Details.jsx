@@ -58,7 +58,7 @@ const Details = () => {
                     </div>
 
                     {/* CLIENT */}
-                    <div className="grid items-start justify-start w-full grid-cols-4 mt-10 md:grid-cols-6">
+                    <div className="grid items-start justify-start w-full grid-cols-4 mt-7 md:grid-cols-6">
                         <div className="grid w-full col-span-2 grid-rows-5">
                             <div className="font-light text-main-text">Invoice Date</div>
                             <div className="font-bold text-[1.2rem]">{data.createdAt}</div>
@@ -80,10 +80,10 @@ const Details = () => {
                         </div>
                     </div>
 
-                    <div>
+                    <div className='mt-14'>
                         <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
-                                <div key={index} className="grid items-center justify-start w-full grid-cols-4 gap-3">
+                                <div key={index} className="grid items-center justify-between w-full grid-cols-4 gap-3">
                                     <div className="">
                                         <h3 className="text-gray-400 text-start">Item name</h3>
                                         <p>{item.name}</p>
