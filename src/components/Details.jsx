@@ -83,7 +83,7 @@ const Details = () => {
                     <div>
                         <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
-                                <div key={index} className="grid items-center justify-start w-full grid-cols-4 ">
+                                <div key={index} className="grid items-center justify-start w-full grid-cols-4 gap-3">
                                     <div className="">
                                         <h3 className="text-gray-400 text-start">Item name</h3>
                                         <p>{item.name}</p>
