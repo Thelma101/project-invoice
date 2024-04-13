@@ -102,10 +102,10 @@ const Details = () => {
                     </div> */}
 
 
-<div className='w-full mt-8 mb-8 rounded-lg gap-38 px-38 bg-main-bg'>
+<div className='w-full mt-8 mb-8 rounded-lg px-38 bg-main-bg'>
     <div className="grid px-3 py-16 bg-nav-bg">
         {data.items.map((item, index) => (
-            <div key={index} className="grid grid-cols-4 gap-10 justify-items-center ">
+            <div key={index} className="grid grid-cols-4 mb-6 justify-items-center ">
                 <div className="">
                     <h3 className="text-gray-400">Item name</h3>
                     <p>{item.name}</p>
@@ -127,15 +127,7 @@ const Details = () => {
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-                    <div className="bg-total-bg rounded-b-lg h-[6rem] w-full mt-8">
+                    <div className="bg-total-bg rounded-b-lg h-[6rem] w-full mt-2">
                         <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
                             <h2 className="text-2xl font-semibold text-white">{data.amount}</h2>
                             <h2 className="text-2xl font-semibold text-white">£{data.total}</h2>
