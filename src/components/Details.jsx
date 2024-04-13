@@ -80,12 +80,12 @@ const Details = () => {
                         </div>
                     </div>
 
-                    <div className='items-center w-full pt-6 mt-14'>
+                    <div className='items-center w-full pt-6 mt-9 md:mt-14'>
                         <div className="flex items-center justify-between w-full mx-4 mt-10 flex-cols-4 pb-7">
                             {data.items.map((item, index) => (
                                 <div key={index} className="grid items-center justify-between w-full grid-cols-4 gap-3">
                                     <div className="">
-                                        <h3 className="text-gray-400 text-start">Item name</h3>
+                                        <h3 className="text-gray-400">Item name</h3>
                                         <p>{item.name}</p>
                                     </div>
                                     <div className="">
