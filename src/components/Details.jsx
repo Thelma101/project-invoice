@@ -12,7 +12,7 @@ const Details = () => {
     const data = dataValue.find(detail => detail.id === id)
 
     return (
-        <div className='mx-28 md:mx-[300px]  mt-14'>
+        <div className='mx-28 md:mx-[300px] mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
                 <Link to={`/`} className="flex items-center justify-center gap-2">
                     <div className='justify-center text-center'>
@@ -103,7 +103,7 @@ const Details = () => {
 
 
 <div className='w-full mt-8 mb-8 rounded-lg px-38 bg-main-bg'>
-    <div className="grid px-3 py-16 bg-nav-bg">
+    <div className="grid px-3 py-16 rounded bg-nav-bg">
         {data.items.map((item, index) => (
             <div key={index} className="grid grid-cols-4 mb-6 justify-items-center ">
                 <div className="">
