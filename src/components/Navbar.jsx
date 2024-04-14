@@ -54,18 +54,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-{/* <div className='flex md:hidden'>
-<div className='m'>
-  <img src={logo} alt="Logo" />
-</div>
-<div className=''>
-  <div className='md:items'>
-    <img src={sun} alt="Sun Icon" />
-  </div>
-  <div className=''></div>
-  <div>
-    <img src={avatar} alt="Avatar" className='' />
-  </div>
-</div>
-</div> */}
