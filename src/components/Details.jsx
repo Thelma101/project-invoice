@@ -11,6 +11,8 @@ const Details = () => {
 
     const data = dataValue.find(detail => detail.id === id)
 
+    // my soft baby
+
     return (
         <div className='mx-28 md:mx-[300px] mt-14'>
             <div className='mx-auto mb-8 text-gray-200'>
@@ -23,11 +25,11 @@ const Details = () => {
                     </div>
                 </Link>
 
-                <div className="flex items-center justify-center w-full mx-auto rounded-lg md:h-16 bg-main-bg">
+                <div className="flex items-center justify-center w-full mx-auto rounded-lg md:h-16 bg-card-bg">
                     <div className="flex items-center justify-between w-full mx-4">
                         <div className="flex items-center gap-3">
                             <h2>Status</h2>
-                            <div className="flex items-center justify-end gap-3 px-3 py-2 bg-green-900 rounded-lg ">
+                            <div className="flex items-center justify-end gap-3 px-3 py-2 bg-green-900 rounded-lg">
                                 <p className="text-sm font-light text-gray-300">{data.status}</p>
                                 {/* <p className="text-sm font-light text-gray-300">Paid</p> */}
                             </div>
@@ -42,7 +44,7 @@ const Details = () => {
             </div>
 
             {/* SENDER */}
-            <div className="relative flex items-center justify-center w-full p-8 mb-8 rounded-lg bg-main-bg">
+            <div className="relative flex items-center justify-center w-full p-8 mb-8 rounded-lg bg-card-bg">
                 <div className="flex flex-col justify-end w-full pt-6 mx-4 pb-7">
                     <div className="flex items-center justify-between">
                         <div className="flex flex-col items-start justify-start">
@@ -102,30 +104,30 @@ const Details = () => {
                     </div> */}
 
 
-<div className='w-full mt-8 mb-8 rounded-lg px-38 bg-main-bg'>
-    <div className="grid px-3 py-16 rounded bg-nav-bg">
-        {data.items.map((item, index) => (
-            <div key={index} className="grid grid-cols-4 mb-6 justify-items-center ">
-                <div className="">
-                    <h3 className="text-gray-400">Item name</h3>
-                    <p>{item.name}</p>
-                </div>
-                <div className="">
-                    <h3 className="text-gray-400">Qty</h3>
-                    <p>{item.quantity}</p>
-                </div>
-                <div className="">
-                    <h3 className="text-gray-400">Item price</h3>
-                    <p>{item.price}</p>
-                </div>
-                <div className="">
-                    <h3 className="text-gray-400">Total</h3>
-                    <p>£{item.total}</p>
-                </div>
-            </div>
-        ))}
-    </div>
-</div>
+                    <div className='w-full mt-8 mb-8 rounded-lg px-38 bg-main-bg'>
+                        <div className="grid px-3 py-16 rounded bg-nav-bg">
+                            {data.items.map((item, index) => (
+                                <div key={index} className="grid grid-cols-4 mb-6 justify-items-center ">
+                                    <div className="">
+                                        <h3 className="text-gray-400">Item name</h3>
+                                        <p>{item.name}</p>
+                                    </div>
+                                    <div className="">
+                                        <h3 className="text-gray-400">Qty</h3>
+                                        <p>{item.quantity}</p>
+                                    </div>
+                                    <div className="">
+                                        <h3 className="text-gray-400">Item price</h3>
+                                        <p>{item.price}</p>
+                                    </div>
+                                    <div className="">
+                                        <h3 className="text-gray-400">Total</h3>
+                                        <p>£{item.total}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
                     <div className="bg-total-bg rounded-b-lg h-[6rem] w-full mt-2">
                         <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
