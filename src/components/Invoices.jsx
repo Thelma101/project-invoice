@@ -3,11 +3,11 @@ import iconArrowRight from '../assets/icon-arrow-right.svg';
 import { dataInvoice } from './Data';
 import { ThemeContext } from './context/ThemeContext';
 import { Link } from 'react-router-dom';
- 
+
 const Invoices = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
-    const [dataValue, setDataValue] = useState(dataInvoice);    
-    
+    const [dataValue, setDataValue] = useState(dataInvoice);
+
     return (
         <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
@@ -56,8 +56,6 @@ const Invoices = () => {
                                     <div className="items-center justify-between hidden gap-3 px-5 py-3 text-center text-white rounded-md md:flex md:justify-center bg-items-bg">
                                         {/* <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} /> */}
                                         <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-text-paid' : value.status === 'pending' ? 'bg-text-pending' : 'bg-text-draft'}`} />
-
-
                                         {/* <p className={value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}>{value.status}</p> */}
                                         <p className={value.status === 'paid' ? 'text-text-paid' : value.status === 'pending' ? 'text-text-pending' : 'text-text-draft'}>{value.status}</p>
 
