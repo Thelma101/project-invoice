@@ -52,7 +52,7 @@ const Invoices = () => {
                                 <div className="flex items-start justify-start gap-4 md:items-center md:justify-center">
                                     <div className="hidden text-2xl font-bold text-white md:flex">$</div>
                                     <div className="font-bold text-white absolute md:hidden mt-10 text-sm flex left-[140px]">$</div>
-                                    <div className="md:flex hidden items-center justify-between md:justify-center text-center bg-[#1F2C3F] px-5 py-3 gap-3 rounded-md text-white ">
+                                    <div className="items-center justify-between hidden gap-3 px-5 py-3 text-center text-white rounded-md md:flex md:justify-center bg-items-bg ">
                                         {/* <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'text-text-paid' : 'text-text-pending'}`} /> */}
                                         <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-text-paid' : value.status === 'pending' ? 'bg-text-pending' : 'bg-text-draft'}`} />
 
