@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
  
 const Invoices = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
-    const [dataValue, setDataValue] = useState(dataInvoice);
+    const [dataValue, setDataValue] = useState(dataInvoice);    
     
     return (
         <div className='bg-main-bg'>
