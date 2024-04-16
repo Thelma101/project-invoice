@@ -30,6 +30,7 @@
   --total-bg: #000000;
   --items-bg: #252945;
   --main-text:#ffffff; 
+  --items-bg:#252945;
   }
 
   body {
@@ -48,6 +49,7 @@
   --total-bg: #374151;
   --items-bg: #f9fafe;
   --main-text:#000000; 
+  --items-bg:#252945;
   }
 
 }
