@@ -9,7 +9,6 @@ const Details = () => {
     const { id } = useParams();
     const { dataValue } = useContext(ThemeContext);
     const data = dataValue.find(detail => detail.id === id);
-    const { status } = useParams();
     
     // my soft baby
 
