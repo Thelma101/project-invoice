@@ -63,14 +63,14 @@ const Details = () => {
                     <div className="grid items-start justify-start w-full grid-cols-4 mt-7 md:grid-cols-6">
                         <div className="grid w-full col-span-2 grid-rows-5">
                             <div className="font-light text-main-text">Invoice Date</div>
-                            <div className="font-bold text-[1.2rem]">{data.createdAt}</div>
+                            <div className="font-bold text-[0.9rem] text-main-text">{data.createdAt}</div>
                             <div></div>
                             <div className="font-light text-main-text">Payment Due</div>
-                            <div className="font-bold text-[1.2rem]">{data.paymentDue}</div>
+                            <div className="font-bold text-[0.9rem] text-main-text">{data.paymentDue}</div>
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-main-text">Bill to</div>
-                            <div className="text-[1.2rem]">{data.clientName}</div>
+                            <div className="text-[0.9rem] text-main-text">{data.clientName}</div>
                             <div className="font-thin text-main-text">{data.clientAddress.street}</div>
                             <div className="font-thin text-main-text">{data.clientAddress.city}</div>
                             <div className="font-thin text-main-text">{data.clientAddress.postCode}</div>
@@ -78,7 +78,7 @@ const Details = () => {
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-main-text">Sent to</div>
-                            <div className="col-span-5">{data.clientEmail}</div>
+                            <div className="col-span-5 text-main-text">{data.clientEmail}</div>
                         </div>
                     </div>
 
@@ -88,7 +88,7 @@ const Details = () => {
                                 <div key={index} className="grid grid-cols-4 mb-5 justify-items-center">
                                     <div className="">
                                         <h3 className="text-gray-400">Item name</h3>
-                                        <p>{item.name}</p>
+                                        <p className='text-main-text'>{item.name}</p>
                                     </div>
                                     <div className="">
                                         <h3 className="text-gray-400">Qty</h3>
