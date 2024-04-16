@@ -15,6 +15,7 @@ export default {
         "total-bg": "var(--total-bg)",
         "items-bg": "var(--items-bg)",
         "main-text": "var(--main-text)",
+        "bd-colour": "var(--bd-colour)",
       },
     },
   },
