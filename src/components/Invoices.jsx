@@ -61,7 +61,7 @@ const Invoices = () => {
                                         <p className={value.status === 'paid' ? 'text-text-paid' : value.status === 'pending' ? 'text-text-pending' : 'text-text-draft'}>{value.status}</p>
 
                                     </div>
-                                    <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-[#1F2C3F] px-4 py-1 gap-3 rounded-md text-white'>
+                                    <div className='absolute flex right-[140px] mt-7 md:hidden items-center justify-end md:justify-center  bg-items-bg px-4 py-1 gap-3 rounded-md text-white'>
                                         <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${value.status === 'paid' ? 'bg-text-paid' : value.status === 'pending' ? 'bg-text-pending' : 'bg-text-draft'}`} />
                                         <p className={value.status === 'paid' ? 'text-text-paid' : value.status === 'pending' ? 'text-text-pending' : 'text-text-draft'}>{value.status}</p>
                                     </div>
