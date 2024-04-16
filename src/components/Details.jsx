@@ -28,9 +28,9 @@ const Details = () => {
                     <div className="flex items-center justify-between w-full mx-4">
                         <div className="flex items-center gap-3">
                             <h2 className='text-main-text'>Status</h2>
-                            <div className={`flex items-center justify-end gap-3 px-3 py-2 rounded-lg ${data.status === 'Paid' ? 'bg-[#166534]' : data.status === 'Pending' ? 'bg-[#EAB308]' : 'bg-[#c64949]'}`}>
-                            <div className={`flex items-center justify-end gap-3 px-3 py-2 rounded-lg ${data.status === 'Paid' ? 'bg-text-paid' : data.status === 'Pending' ? 'bg-text-pending' : 'bg-text-draft'}`} />
-                            <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${data.status === 'Paid' ? 'bg-text-paid' : data.status === 'Pending' ? 'bg-text-pending' : 'bg-text-draft'}`} />
+                            <div className={`flex items-center justify-end gap-3 px-3 py-2 rounded-lg ${data.status === 'paid' ? 'bg-[#166534]' : data.status === 'pending' ? 'bg-[#EAB308]' : 'bg-[#c64949]'}`}>
+                            {/* <div className={`flex items-center justify-end gap-3 px-3 py-2 rounded-lg ${data.status === 'Paid' ? 'bg-text-paid' : data.status === 'Pending' ? 'bg-text-pending' : 'bg-text-draft'}`} /> */}
+                            <div className={`w-2 h-2 rounded-full md:w-2 md:h-2 justify-evenly ${data.status === 'paid' ? 'bg-text-paid' : data.status === 'pending' ? 'bg-text-pending' : 'bg-text-draft'}`} />
                             <p className="text-sm font-light text-gray-300">{data.status}</p>
                                 {/* <p className="text-sm font-light text-gray-300">Paid</p> */}
                             </div>
