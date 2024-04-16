@@ -9,7 +9,7 @@ export const dataInvoice = [
     paymentTerms: 1,
     clientName: "Jensen Huang",
     clientEmail: "jensenh@mail.com",
-    status: "paid",
+    status: "Paid",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
@@ -40,7 +40,7 @@ export const dataInvoice = [
     paymentTerms: 30,
     clientName: "Alex Grim",
     clientEmail: "alexgrim@mail.com",
-    status: "pending",
+    status: "Pending",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
@@ -77,7 +77,7 @@ export const dataInvoice = [
     paymentTerms: 7,
     clientName: "John Morrison",
     clientEmail: "jm@myco.com",
-    status: "paid",
+    status: "Paid",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
@@ -108,7 +108,7 @@ export const dataInvoice = [
     paymentTerms: 1,
     clientName: "Alysa Werner",
     clientEmail: "alysa@email.co.uk",
-    status: "pending",
+    status: "Pending",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
@@ -139,7 +139,7 @@ export const dataInvoice = [
     paymentTerms: 7,
     clientName: "Mellisa Clarke",
     clientEmail: "mellisa.clarke@example.com",
-    status: "pending",
+    status: "Pending",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
@@ -176,7 +176,7 @@ export const dataInvoice = [
     paymentTerms: 30,
     clientName: "Thomas Wayne",
     clientEmail: "thomas@dc.com",
-    status: "pending",
+    status: "Pending",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
@@ -206,8 +206,8 @@ export const dataInvoice = [
     description: "Logo Re-design",
     paymentTerms: 7,
     clientName: "Anita Wainwright",
-    clientEmail: "",
-    status: "draft",
+    clientEmail: "anita.w@gmail.com",
+    status: "Draft",
     senderAddress: {
       street: "19 Union Terrace",
       city: "London",
