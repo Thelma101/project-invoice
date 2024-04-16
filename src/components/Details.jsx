@@ -8,9 +8,9 @@ import { ThemeContext } from './context/ThemeContext';
 const Details = () => {
     const { id } = useParams();
     const { dataValue } = useContext(ThemeContext);
-
-    const data = dataValue.find(detail => detail.id === id)
-
+    const data = dataValue.find(detail => detail.id === id);
+    const { status } = useParams();
+    
     // my soft baby
 
     return (
@@ -29,7 +29,7 @@ const Details = () => {
                     <div className="flex items-center justify-between w-full mx-4">
                         <div className="flex items-center gap-3">
                             <h2 className='text-main-text'>Status</h2>
-                            <div className="flex items-center justify-end gap-3 px-3 py-2 bg-green-900 rounded-lg">
+                            <div className="flex items-center justify-end gap-3 px-3 py-2 rounded-lg">
                                 <p className="text-sm font-light text-gray-300">{data.status}</p>
                                 {/* <p className="text-sm font-light text-gray-300">Paid</p> */}
                             </div>
