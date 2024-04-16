@@ -14,13 +14,13 @@ const Details = () => {
     // my soft baby
 
     return (
-        <div className='mx-28 md:mx-[300px] mt-14'>
-            <div className='mx-auto mb-8 text-gray-200'>
+        <div className='mx-28 md:mx-[300px]'>
+            <div className='mx-auto mb-6 text-gray-200'>
                 <Link to={`/`} className="flex items-center justify-center gap-2">
-                    <div className='justify-center text-center'>
+                    <div className='justify-center text-center mt-14'>
                         <img src={leftArrow} alt='leftpointer' className='text-[#7c5dfa]] mx-auto cursor-pointer ' />
                     </div>
-                    <div className=''>
+                    <div className='mt-14'>
                         <p className='mx-auto cursor-pointer text-text-access'>Back</p>
                     </div>
                 </Link>
