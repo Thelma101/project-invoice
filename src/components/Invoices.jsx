@@ -42,7 +42,7 @@ const Invoices = () => {
                         <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-card-bg border-2 border-bd-colour hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
                             <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
                                 <div className="flex flex-col gap-12 md:flex-row">
-                                    <div className="hidden font-bold text-white md:block ">{value.id}</div>
+                                    <div className="hidden font-bold text-text-access md:block ">{value.id}</div>
                                     <div className="hidden md:flex text-slate-400">Due {value.paymentDue}</div>
                                     <div className=" text-slate-400 absolute flex left-[140px] md:hidden">Due {value.paymentDue}</div>
                                     <div className="hidden md:flex text-slate-500">{value.clientEmail}</div>
