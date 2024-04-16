@@ -28,7 +28,7 @@ const Details = () => {
                 <div className="flex items-center justify-center w-full mx-auto rounded-lg md:h-16 bg-card-bg">
                     <div className="flex items-center justify-between w-full mx-4">
                         <div className="flex items-center gap-3">
-                            <h2>Status</h2>
+                            <h2 className='text-text-access'>Status</h2>
                             <div className="flex items-center justify-end gap-3 px-3 py-2 bg-green-900 rounded-lg">
                                 <p className="text-sm font-light text-gray-300">{data.status}</p>
                                 {/* <p className="text-sm font-light text-gray-300">Paid</p> */}
