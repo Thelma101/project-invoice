@@ -29,7 +29,7 @@ const Details = () => {
                     <div className="flex items-center justify-between w-full mx-4">
                         <div className="flex items-center gap-3">
                             <h2 className='text-main-text'>Status</h2>
-                            <div className={`flex items-center justify-end gap-3 px-3 py-2 rounded-lg ${data.status === 'paid' ? 'bg-[#166534]' : data.status === 'pending' ? 'bg-text-pending' : 'bg-text-draft'}`}>
+                            <div className={`flex items-center justify-end gap-3 px-3 py-2 rounded-lg ${data.status === 'paid' ? 'bg-[#166534]' : data.status === 'pending' ? 'bg-[#EAB308]' : 'bg-text-draft'}`}>
                                 <p className={`{"text-sm font-light text-gray-300"} `}>{data.status}</p>
                                 {/* <p className="text-sm font-light text-gray-300">Paid</p> */}
                             </div>
