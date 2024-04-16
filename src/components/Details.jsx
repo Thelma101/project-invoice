@@ -70,7 +70,7 @@ const Details = () => {
                         </div>
                         <div className="grid w-full col-span-2 grid-row-5">
                             <div className="font-light text-main-text">Bill to</div>
-                            <div className="text-[0.9rem] text-main-text">{data.clientName}</div>
+                            <div className="text-[1.2rem] text-main-text mb-4">{data.clientName}</div>
                             <div className="font-thin text-main-text">{data.clientAddress.street}</div>
                             <div className="font-thin text-main-text">{data.clientAddress.city}</div>
                             <div className="font-thin text-main-text">{data.clientAddress.postCode}</div>
