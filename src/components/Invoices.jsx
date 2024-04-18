@@ -90,4 +90,3 @@ const dropdownArrowStyle = {
 
 export default Invoices;
 
-
