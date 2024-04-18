@@ -29,7 +29,7 @@ const Invoices = () => {
                                     +
                                 </div>
                                 <div className='flex items-center justify-center text-center text-white'>
-                                    New&nbsp;<span className='hidden md:block'> Invoice</span>
+                                    <button>New&nbsp;<span className='hidden md:block'> Invoice</span></button>
                                 </div>
                             </div>
                         </div>
