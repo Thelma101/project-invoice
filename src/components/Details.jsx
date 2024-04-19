@@ -108,7 +108,7 @@ const Details = () => {
 
                     <div className="bg-total-bg rounded-b-lg h-[6rem] w-full">
                         <div className="flex items-start justify-between p-10 rounded-lg rounded-t-none">
-                            <h2 class="text-white font-semibold text-2xl">Amount</h2>
+                            <h2 className="text-2xl font-semibold text-white">Amount</h2>
                             <h2 className="text-2xl font-semibold text-white">{data.amount}</h2>
                             <h2 className="text-2xl font-semibold text-white">£{data.total}</h2>
                         </div>
