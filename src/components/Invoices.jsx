@@ -3,6 +3,7 @@ import iconArrowRight from '../assets/icon-arrow-right.svg';
 import { dataInvoice } from './Data';
 import { ThemeContext } from './context/ThemeContext';
 import { Link } from 'react-router-dom';
+import { NewInvoice } from './NewInvoice';
 
 const Invoices = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
