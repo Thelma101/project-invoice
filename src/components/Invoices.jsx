@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom';
 const Invoices = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
     const [dataValue, setDataValue] = useState(dataInvoice);
+    const [newInvoiceForm, setNewInvoiceForm] = useState(false);
+
+    const handleForm = () => {
+        setNewInvoiceForm(!newInvoiceForm);
+        console.log(newInvoiceForm);
+    }
 
     return (
         <div className='bg-main-bg'>
@@ -24,7 +30,7 @@ const Invoices = () => {
                                 <img src="" alt="" style={dropdownArrowStyle} />
                             </div>
 
-                            <div className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer onClick={toggleTheme}">
+                            <div className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer onClick={handleForm}">
                                 <div className="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
                                     +
                                 </div>
