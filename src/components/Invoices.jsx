@@ -35,7 +35,7 @@ const Invoices = () => {
                                 <button>onClick={handleForm}</button>
                                 <div>
                                     <button onClick={handleFormToggle}>Toggle Form</button>
-                                    {newInvoiceFormVisible && <NewInvoiceForm />}
+                                    {newInvoice && <NewInvoice />}
                                 </div>
                                 <div className="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
                                     +
