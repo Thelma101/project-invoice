@@ -3,7 +3,7 @@ import iconArrowRight from '../assets/icon-arrow-right.svg';
 import { dataInvoice } from './Data';
 import { ThemeContext } from './context/ThemeContext';
 import { Link } from 'react-router-dom';
-import  NewInvoice  from './NewInvoice';
+import NewInvoice from './NewInvoice';
 
 const Invoices = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -32,7 +32,11 @@ const Invoices = () => {
                             </div>
 
                             <div className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer">
-                           <button></button>onClick={handleForm}
+                                <button></button>onClick={handleForm}
+                                <div>
+                                    <button onClick={handleFormToggle}>Toggle Form</button>
+                                    {newInvoiceFormVisible && <NewInvoiceForm />}
+                                </div>
                                 <div className="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
                                     +
                                 </div>
