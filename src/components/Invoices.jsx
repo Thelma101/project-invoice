@@ -33,10 +33,10 @@ const Invoices = () => {
 
                             <div onClick={handleForm} className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer">
                                 {/* <button>onClick={handleForm}</button> */}
-                                <div>
+                                {/* <div>
                                     <button onClick={handleForm}></button>
                                     {newInvoiceForm && <NewInvoice />}
-                                </div>
+                                </div> */}
                                 <div className="overlay">
                                     <div className="form-container">
                                         <button onClick={handleForm}>Close</button>
