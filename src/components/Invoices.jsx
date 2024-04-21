@@ -39,7 +39,7 @@ const Invoices = () => {
                                 </div> */}
                                 <div className="overlay">
                                     <div className="form-container">
-                                        <button onClick={handleForm}>Close</button>
+                                        <button onClick={handleForm}></button>
                                         <NewInvoice />
                                     </div>
                                 </div>
