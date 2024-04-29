@@ -29,15 +29,3 @@ export const Provider = ({ children }) => {
         </ThemeContext.Provider>
     );
 };
-
-
-
-// useEffect(()=>{
-//     document.body.className = theme;
-//     const root = window.document.documentElement;
-//     root.style.setProperty('--primary-color', theme === 'light' ? '#007bff' : '#343a40');
-//     root.classList.remove(theme === 'light' ? 'dark' : 'light');
-//     root.classList.add(theme);
-// }, [theme])
-{/* <ThemeContext.Provider value={{ theme, toggleTheme }}></ThemeContext.Provider>
-import { ThemeContext, Provider } from "./ThemeContext"; */}
