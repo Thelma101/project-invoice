@@ -10,8 +10,6 @@ const Details = () => {
     const { dataValue } = useContext(ThemeContext);
     const data = dataValue.find(detail => detail.id === id);
 
-    // my soft baby
-
     return (
         <div className='mx-28 md:mx-[300px]'>
             <div className='mx-auto mb-6 text-gray-200'>
