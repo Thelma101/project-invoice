@@ -118,6 +118,7 @@ const NewInvoice = () => {
                         <input type='text' name='clientAddress' id='clientAddress' value={formInputData.clientAddress} onChange={handleChange} placeholder='14x Lekki' className='p-3 border-2 border-gray-700 rounded-md' />
                         {error.clientAddress && <p className="text-xs text-red-700 font-extralight">{error.clientAddress}</p>}
                     </div>
+                    {/* 08102595897 */}
 
                     {/* buttons */}
                     <div className='flex mt-8 mb-8'>
