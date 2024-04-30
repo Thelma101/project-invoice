@@ -117,7 +117,7 @@ const NewInvoice = () => {
                                 placeholder="102105"
                                 value={formInputData.postCode}
                                 onChange={handleChange}
-                                className="p-3 border-2 border-gray-700 rounded-md"
+                                className="p-3 border-2 border-gray-700 rounded-md ml-3"
                             />
                             {error.postCode && <p className="text-xs text-red-700">{error.postCode}</p>}
                         </div>
@@ -129,7 +129,7 @@ const NewInvoice = () => {
                                 placeholder="Nigeria"
                                 value={formInputData.country}
                                 onChange={handleChange}
-                                className="p-3 border-2 border-gray-700 rounded-md"
+                                className="p-3 border-2 border-gray-700 rounded-md ml-3"
                             />
                             {error.country && <p class-class="text-xs text-red-700">{error.country}</p>}
                         </div>
@@ -146,7 +146,7 @@ const NewInvoice = () => {
                                     value={formInputData.paymentDue}
                                     onChange={handleChange}
                                     type="date"
-                                    className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                                    className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                                 />
                             </div>
                             <div className="col-span-1 flex flex-col">
@@ -155,7 +155,7 @@ const NewInvoice = () => {
                                     name="paymentTerms"
                                     value={formInputData.paymentTerms}
                                     onChange={handleChange}
-                                    className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                                    className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                                 >
                                     {deliveryPeriod.map((period, index) => (
                                         <option key={index} value={period.value}>
