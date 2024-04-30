@@ -89,13 +89,13 @@ const NewInvoice = () => {
                         placeholder="8b Alignton"
                         value={formInputData.homeAddress}
                         onChange={handleChange}
-                        className="p-3 border-2 border-gray-700 rounded-md"
+                        className="p-2 border-2 border-gray-700 rounded-md"
                     />
                     {error.homeAddress && <p className="text-xs text-red-700">{error.homeAddress}</p>}
                 </div>
 
                 {/* Section: Payment Information */}
-                <div className="flex mt-8">
+                <div className="grid grid-cols-3 gap-2 mt-8">
                     <div className="flex flex-col">
                         <label>City</label>
                         <input
@@ -104,7 +104,7 @@ const NewInvoice = () => {
                             placeholder="Texas"
                             value={formInputData.city}
                             onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md"
+                            className="p-2 border-2 border-gray-700 rounded-md"
                         />
                         {error.city && <p className="text-xs text-red-700">{error.city}</p>}
                     </div>
@@ -116,7 +116,7 @@ const NewInvoice = () => {
                             placeholder="102105"
                             value={formInputData.postCode}
                             onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                            className="p-2 border-2 border-gray-700 rounded-md ml-3"
                         />
                         {error.postCode && <p className="text-xs text-red-700">{error.postCode}</p>}
                     </div>
@@ -128,7 +128,7 @@ const NewInvoice = () => {
                             placeholder="Nigeria"
                             value={formInputData.country}
                             onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                            className="p-2 border-2 border-gray-700 rounded-md ml-3"
                         />
                         {error.country && <p class-class="text-xs text-red-700">{error.country}</p>}
                     </div>
@@ -143,7 +143,7 @@ const NewInvoice = () => {
                         placeholder="Parry Obaseki"
                         value={formInputData.clientName}
                         onChange={handleChange}
-                        className="p-3 border-2 border-gray-700 rounded-md"
+                        className="p-2 border-2 border-gray-700 rounded-md"
                     />
                     {error.clientName && <p className="text-xs text-red-700">{error.clientName}</p>}
                 </div>
@@ -156,7 +156,7 @@ const NewInvoice = () => {
                         placeholder="po@mail.com"
                         value={formInputData.clientEmail}
                         onChange={handleChange}
-                        className="p-3 border-2 border-gray-700 rounded-md"
+                        className="p-2 border-2 border-gray-700 rounded-md"
                     />
                     {error.clientEmail && <p className="text-xs text-red-700">{error.clientEmail}</p>}
                 </div>
@@ -168,7 +168,7 @@ const NewInvoice = () => {
                         placeholder="Benin city, Brussels"
                         value={formInputData.clienAddress}
                         onChange={handleChange}
-                        className="p-3 border-2 border-gray-700 rounded-md"
+                        className="p-2 border-2 border-gray-700 rounded-md"
                     />
                     {error.clienAddress && <p className="text-xs text-red-700">{error.clientEclienAddressmail}</p>}
                 </div>
@@ -183,7 +183,7 @@ const NewInvoice = () => {
                             placeholder="Texas"
                             value={formInputData.city}
                             onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md"
+                            className="p-2 border-2 border-gray-700 rounded-md"
                         />
                         {error.city && <p className="text-xs text-red-700">{error.city}</p>}
                     </div>
@@ -195,7 +195,7 @@ const NewInvoice = () => {
                             placeholder="102105"
                             value={formInputData.postCode}
                             onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                            className="p-2 border-2 border-gray-700 rounded-md ml-3"
                         />
                         {error.postCode && <p className="text-xs text-red-700">{error.postCode}</p>}
                     </div>
@@ -207,7 +207,7 @@ const NewInvoice = () => {
                             placeholder="Nigeria"
                             value={formInputData.country}
                             onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                            className="p-2 border-2 border-gray-700 rounded-md ml-3"
                         />
                         {error.country && <p class-class="text-xs text-red-700">{error.country}</p>}
                     </div>
@@ -224,7 +224,7 @@ const NewInvoice = () => {
                                 value={formInputData.paymentDue}
                                 onChange={handleChange}
                                 type="date"
-                                className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                                className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                             />
                         </div>
                         <div className="col-span-1 flex flex-col">
@@ -233,7 +233,7 @@ const NewInvoice = () => {
                                 name="paymentTerms"
                                 value={formInputData.paymentTerms}
                                 onChange={handleChange}
-                                className="p-3.5 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                                className="p-2.5 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                             >
                                 {deliveryPeriod.map((period, index) => (
                                     <option key={index} value={period.value}>
@@ -245,7 +245,7 @@ const NewInvoice = () => {
                     </div>
                 </div>
                 {/* Section: Description */}
-                <div className="col-span-3 flex flex-col mb-3">
+                <div className="col-span-3 flex flex-col mb-3 mt-8">
                     <label>Description</label>
                     <input
                         type="text"
@@ -253,14 +253,14 @@ const NewInvoice = () => {
                         placeholder="Description"
                         value={formInputData.description}
                         onChange={handleChange}
-                        className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                        className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                     />
                     {error.description && <p class="text-xs text-red-700">{error.description}</p>}
                 </div>
 
                 {/* Section: Items List */}
-                <div className="col-span-3 flex flex-col mb-3">
-                    <h1>Items List</h1>
+                <div className="col-span-3 flex flex-col mb-3 mt-8">
+                    <h1 className='text-[#7c5dfa]'>Items List</h1>
                     {formInputData.items.map((item, index) => (
                         <div
                             key={index}
