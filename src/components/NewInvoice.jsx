@@ -160,8 +160,61 @@ const NewInvoice = () => {
                     />
                     {error.clientEmail && <p className="text-xs text-red-700">{error.clientEmail}</p>}
                 </div>
+                <div className="flex flex-col mt-8">
+                    <label>Client Address</label>
+                    <input
+                        type="text"
+                        name="clienAddress"
+                        placeholder="Benin city, Brussels"
+                        value={formInputData.clienAddress}
+                        onChange={handleChange}
+                        className="p-3 border-2 border-gray-700 rounded-md"
+                    />
+                    {error.clienAddress && <p className="text-xs text-red-700">{error.clientEclienAddressmail}</p>}
+                </div>
+
+
+                <div className="grid grid-cols-3 gap-2 mt-8">
+                    <div className="flex flex-col">
+                        <label>City</label>
+                        <input
+                            type="text"
+                            name="city"
+                            placeholder="Texas"
+                            value={formInputData.city}
+                            onChange={handleChange}
+                            className="p-3 border-2 border-gray-700 rounded-md"
+                        />
+                        {error.city && <p className="text-xs text-red-700">{error.city}</p>}
+                    </div>
+                    <div className="flex flex-col">
+                        <label>PostCode</label>
+                        <input
+                            type="text"
+                            name="postCode"
+                            placeholder="102105"
+                            value={formInputData.postCode}
+                            onChange={handleChange}
+                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                        />
+                        {error.postCode && <p className="text-xs text-red-700">{error.postCode}</p>}
+                    </div>
+                    <div className="flex flex-col">
+                        <label>Country</label>
+                        <input
+                            type="text"
+                            name="country"
+                            placeholder="Nigeria"
+                            value={formInputData.country}
+                            onChange={handleChange}
+                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                        />
+                        {error.country && <p class-class="text-xs text-red-700">{error.country}</p>}
+                    </div>
+                </div>
+
                 {/* Section: Payment Terms */}
-                <div className="col-span-3">
+                <div className="col-span-3 mt-8">
                     <div className="grid grid-cols-2 gap-2">
                         <div className="col-span-1 flex flex-col">
                             <label>Invoice Date</label>
@@ -191,21 +244,6 @@ const NewInvoice = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Section: Client Details */}
-                <div className="flex flex-col mt-8">
-                    <label>Client Name</label>
-                    <input
-                        type="text"
-                        name="clientName"
-                        placeholder="Tee"
-                        value={formInputData.clientName}
-                        onChange={handleChange}
-                        className="p-3 border-2 border-gray-700 rounded-md"
-                    />
-                    {error.clientName && <p class="text-xs text-red-700">{error.clientName}</p>}
-                </div>
-
                 {/* Section: Description */}
                 <div className="col-span-3 flex flex-col mb-3">
                     <label>Description</label>
