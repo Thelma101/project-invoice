@@ -40,7 +40,7 @@ const Invoices = () => {
                                 <div className="overlay">
                                     <div className="form-container">
                                         <button onClick={handleForm}></button>
-                                        <NewInvoice />
+                                        {/* <NewInvoice /> */}
                                     </div>
                                 </div>
                                 <div className="bg-white w-[20px] h-[20px] md:h-[40px] md:w-[40px] rounded-full  flex items-center justify-center text-[#7c5dfa]">
