@@ -13,6 +13,13 @@ const NewInvoice = () => {
         email: '',
     });
 
+    const deliveryPeriod = [
+        { text: 'Next 1 day', value: 1 },
+        { text: 'Next 7 days', value: 7 },
+        { text: 'Next 14 days', value: 14 },
+        { text: 'Next 30 days', value: 30 },
+      ];
+      
     const [error, setError] = useState({});
 
     const handleChange = (e) => {
