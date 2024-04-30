@@ -78,10 +78,9 @@ const NewInvoice = () => {
     };
 
     return (
-        // <div className='hidden'>
-            <div className='flex items-center justify-center mx-auto'>
+            <div className='flex items-center justify-center mx-auto text-main-text'>
                 <form onSubmit={handleSubmit}>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col mt-8">
                         <p className="text-[#7c5dfa]">Bill From</p>
                         <label>Street Address</label>
                         <input
@@ -155,7 +154,7 @@ const NewInvoice = () => {
                                     name="paymentTerms"
                                     value={formInputData.paymentTerms}
                                     onChange={handleChange}
-                                    className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                                    className="p-3.5 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                                 >
                                     {deliveryPeriod.map((period, index) => (
                                         <option key={index} value={period.value}>
@@ -190,7 +189,7 @@ const NewInvoice = () => {
                             placeholder="Description"
                             value={formInputData.description}
                             onChange={handleChange}
-                            className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                            className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                         />
                         {error.description && <p class="text-xs text-red-700">{error.description}</p>}
                     </div>
