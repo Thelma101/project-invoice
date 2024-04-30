@@ -159,7 +159,6 @@ const NewInvoice = () => {
                         onChange={handleChange}
                         className="p-2 border-[.8px] text-[#626161] border-gray-700 rounded-md"
                     />
-                    {/* {error.clientEmail && <p className="text-xs text-red-700">{error.clientEmail}</p>} */}
                     {error.email && <p className="text-xs text-red-700">{error.email}</p>}
                 </div>
                 <div className="flex flex-col mt-8">
@@ -261,7 +260,6 @@ const NewInvoice = () => {
                     {error.description && <p class="text-xs text-red-700">{error.description}</p>}
                 </div>
 
-                {/* Section: Items List */}
                 <div className="col-span-3 flex flex-col mb-3 mt-8">
                     <h1 className='text-[#7c5dfa]'>Items List</h1>
                     {formInputData.items.map((item, index) => (
@@ -279,27 +277,31 @@ const NewInvoice = () => {
                                     className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.8px]"
                                 />
                             </div>
+
                             <div className="flex flex-col justify-center items-start">
                                 <label>Quantity</label>
                                 <input
                                     type="number"
                                     value={item.quantity}
-                                    onChange={(e) => handleItemChange(index, "quantity", e.target.value)}
+                                    onChange={(e) => handleItemChange(index, "quantity", parseInt(e.target.value))}
                                     className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.8px]"
                                 />
                             </div>
+
                             <div className="flex flex-col justify-center items-start">
                                 <label>Price</label>
                                 <input
                                     type="number"
                                     value={item.price}
-                                    onChange={(e) => handleItemChange(index, "price", e.target.value)}
+                                    onChange={(e) => handleItemChange(index, "price", parseFloat(e.target.value))}
                                     className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.8px]"
                                 />
                             </div>
+
                             <div className="flex flex-col justify-start items-start">
                                 <label>Total</label>
                                 <input
+                                    type="text"
                                     disabled
                                     placeholder={item.total}
                                     value={item.total}
@@ -309,7 +311,6 @@ const NewInvoice = () => {
                         </div>
                     ))}
                 </div>
-
                 {/* Submit Button */}
                 <div className="flex mt-8 mb-8">
                     <div className="flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg cursor-pointer bg-slate-700" onClick={clearSubmit}>
