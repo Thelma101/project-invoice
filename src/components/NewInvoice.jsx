@@ -22,7 +22,7 @@ const initialFormState = {
   ],
 };
 
-// Payment periods for select options
+
 const deliveryPeriod = [
   { text: 'Next 1 day', value: 1 },
   { text: 'Next 7 days', value: 7 },
@@ -31,7 +31,6 @@ const deliveryPeriod = [
 ];
 
 const NewInvoice = () => {
-  // State for form data and errors
   const [formInputData, setFormInputData] = useState(initialFormState);
   const [error, setError] = useState({});
 
@@ -51,20 +50,17 @@ const NewInvoice = () => {
     e.preventDefault();
     const checkError = {};
 
-    // Validate non-empty fields
     for (const key in formInputData) {
       if (!formInputData[key]) {
         checkError[key] = 'Field cannot be empty';
       }
     }
 
-    // Validate postal code format (6-digit number)
     const post = /^\d{6}$/;
     if (!post.test(formInputData.postCode)) {
       checkError.postCode = 'Postal code must be a 6-digit number';
     }
 
-    // Validate email format
     const validateEmail = (email) => {
       const regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return regEx.test(email);
@@ -73,7 +69,6 @@ const NewInvoice = () => {
       checkError.email = 'Invalid email format';
     }
 
-    // Set errors if any
     setError(checkError);
 
     // If no errors, submit the form
