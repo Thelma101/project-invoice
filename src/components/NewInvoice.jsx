@@ -71,10 +71,9 @@ const NewInvoice = () => {
 
     setError(checkError);
 
-    // If no errors, submit the form
     if (Object.keys(checkError).length === 0) {
       alert('Form submitted successfully');
-      clearSubmit(); // Clear the form
+      clearSubmit();
     }
   };
 
