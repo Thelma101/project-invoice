@@ -14,6 +14,9 @@ const router = createBrowserRouter([
     path : '/', element : <Invoices />
   },
   {
+    path : '/newinvoice', element : <NewInvoice />
+  },
+  {
     path : '/:id', element : <Details />
   }
 ])
