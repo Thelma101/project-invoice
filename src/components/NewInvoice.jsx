@@ -24,6 +24,7 @@ const initialFormState = {
 
 
 const deliveryPeriod = [
+    { text: 'Select', value: 0 },
     { text: 'Next 1 day', value: 1 },
     { text: 'Next 7 days', value: 7 },
     { text: 'Next 14 days', value: 14 },
@@ -154,11 +155,12 @@ const NewInvoice = () => {
                         type="text"
                         name="clientEmail"
                         placeholder="po@mail.com"
-                        value={formInputData.clientEmail}
+                        value={formInputData.email}
                         onChange={handleChange}
                         className="p-2 border-[.8px] text-[#626161] border-gray-700 rounded-md"
                     />
-                    {error.clientEmail && <p className="text-xs text-red-700">{error.clientEmail}</p>}
+                    {/* {error.clientEmail && <p className="text-xs text-red-700">{error.clientEmail}</p>} */}
+                    {error.email && <p className="text-xs text-red-700">{error.email}</p>}
                 </div>
                 <div className="flex flex-col mt-8">
                     <label>Client Address</label>
@@ -226,6 +228,7 @@ const NewInvoice = () => {
                                 type="date"
                                 className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-gray-700 border-[.8px]"
                             />
+                            {error.country && <p className="text-xs text-red-700">{error.country}</p>}
                         </div>
                         <div className="col-span-1 flex flex-col">
                             <label>Payment Terms</label>
