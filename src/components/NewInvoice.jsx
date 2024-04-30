@@ -78,183 +78,209 @@ const NewInvoice = () => {
     };
 
     return (
-            <div className='flex items-center justify-center mx-auto text-main-text'>
-                <form onSubmit={handleSubmit}>
-                    <div className="flex flex-col mt-8">
-                        <p className="text-[#7c5dfa]">Bill From</p>
-                        <label>Street Address</label>
+        <div className='flex items-center justify-center mx-auto text-main-text'>
+            <form onSubmit={handleSubmit}>
+                <div className="flex flex-col mt-8">
+                    <p className="text-[#7c5dfa]">Bill From</p>
+                    <label>Street Address</label>
+                    <input
+                        type="text"
+                        name="homeAddress"
+                        placeholder="8b Alignton"
+                        value={formInputData.homeAddress}
+                        onChange={handleChange}
+                        className="p-3 border-2 border-gray-700 rounded-md"
+                    />
+                    {error.homeAddress && <p className="text-xs text-red-700">{error.homeAddress}</p>}
+                </div>
+
+                {/* Section: Payment Information */}
+                <div className="flex mt-8">
+                    <div className="flex flex-col">
+                        <label>City</label>
                         <input
                             type="text"
-                            name="homeAddress"
-                            placeholder="8b Alignton"
-                            value={formInputData.homeAddress}
+                            name="city"
+                            placeholder="Texas"
+                            value={formInputData.city}
                             onChange={handleChange}
                             className="p-3 border-2 border-gray-700 rounded-md"
                         />
-                        {error.homeAddress && <p className="text-xs text-red-700">{error.homeAddress}</p>}
+                        {error.city && <p className="text-xs text-red-700">{error.city}</p>}
                     </div>
+                    <div className="flex flex-col">
+                        <label>PostCode</label>
+                        <input
+                            type="text"
+                            name="postCode"
+                            placeholder="102105"
+                            value={formInputData.postCode}
+                            onChange={handleChange}
+                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                        />
+                        {error.postCode && <p className="text-xs text-red-700">{error.postCode}</p>}
+                    </div>
+                    <div className="flex flex-col">
+                        <label>Country</label>
+                        <input
+                            type="text"
+                            name="country"
+                            placeholder="Nigeria"
+                            value={formInputData.country}
+                            onChange={handleChange}
+                            className="p-3 border-2 border-gray-700 rounded-md ml-3"
+                        />
+                        {error.country && <p class-class="text-xs text-red-700">{error.country}</p>}
+                    </div>
+                </div>
 
-                    {/* Section: Payment Information */}
-                    <div className="flex mt-8">
-                        <div className="flex flex-col">
-                            <label>City</label>
+                <div className="flex flex-col mt-8">
+                    <p className="text-[#7c5dfa]">Bill To</p>
+                    <label>Client Name</label>
+                    <input
+                        type="text"
+                        name="clientName"
+                        placeholder="Parry Obaseki"
+                        value={formInputData.clientName}
+                        onChange={handleChange}
+                        className="p-3 border-2 border-gray-700 rounded-md"
+                    />
+                    {error.clientName && <p className="text-xs text-red-700">{error.clientName}</p>}
+                </div>
+
+                <div className="flex flex-col mt-8">
+                    <label>Client Email</label>
+                    <input
+                        type="text"
+                        name="clientEmail"
+                        placeholder="po@mail.com"
+                        value={formInputData.clientEmail}
+                        onChange={handleChange}
+                        className="p-3 border-2 border-gray-700 rounded-md"
+                    />
+                    {error.clientEmail && <p className="text-xs text-red-700">{error.clientEmail}</p>}
+                </div>
+                {/* Section: Payment Terms */}
+                <div className="col-span-3">
+                    <div className="grid grid-cols-2 gap-2">
+                        <div className="col-span-1 flex flex-col">
+                            <label>Invoice Date</label>
                             <input
-                                type="text"
-                                name="city"
-                                placeholder="Texas"
-                                value={formInputData.city}
+                                required
+                                name="paymentDue"
+                                value={formInputData.paymentDue}
                                 onChange={handleChange}
-                                className="p-3 border-2 border-gray-700 rounded-md"
+                                type="date"
+                                className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                             />
-                            {error.city && <p className="text-xs text-red-700">{error.city}</p>}
                         </div>
-                        <div className="flex flex-col">
-                            <label>PostCode</label>
-                            <input
-                                type="text"
-                                name="postCode"
-                                placeholder="102105"
-                                value={formInputData.postCode}
+                        <div className="col-span-1 flex flex-col">
+                            <label>Payment Terms</label>
+                            <select
+                                name="paymentTerms"
+                                value={formInputData.paymentTerms}
                                 onChange={handleChange}
-                                className="p-3 border-2 border-gray-700 rounded-md ml-3"
-                            />
-                            {error.postCode && <p className="text-xs text-red-700">{error.postCode}</p>}
-                        </div>
-                        <div className="flex flex-col">
-                            <label>Country</label>
-                            <input
-                                type="text"
-                                name="country"
-                                placeholder="Nigeria"
-                                value={formInputData.country}
-                                onChange={handleChange}
-                                className="p-3 border-2 border-gray-700 rounded-md ml-3"
-                            />
-                            {error.country && <p class-class="text-xs text-red-700">{error.country}</p>}
+                                className="p-3.5 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                            >
+                                {deliveryPeriod.map((period, index) => (
+                                    <option key={index} value={period.value}>
+                                        {period.text}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
                     </div>
+                </div>
 
-                    {/* Section: Payment Terms */}
-                    <div className="col-span-3">
-                        <div className="grid grid-cols-2 gap-2">
-                            <div className="col-span-1 flex flex-col">
-                                <label>Invoice Date</label>
+                {/* Section: Client Details */}
+                <div className="flex flex-col mt-8">
+                    <label>Client Name</label>
+                    <input
+                        type="text"
+                        name="clientName"
+                        placeholder="Tee"
+                        value={formInputData.clientName}
+                        onChange={handleChange}
+                        className="p-3 border-2 border-gray-700 rounded-md"
+                    />
+                    {error.clientName && <p class="text-xs text-red-700">{error.clientName}</p>}
+                </div>
+
+                {/* Section: Description */}
+                <div className="col-span-3 flex flex-col mb-3">
+                    <label>Description</label>
+                    <input
+                        type="text"
+                        name="description"
+                        placeholder="Description"
+                        value={formInputData.description}
+                        onChange={handleChange}
+                        className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                    />
+                    {error.description && <p class="text-xs text-red-700">{error.description}</p>}
+                </div>
+
+                {/* Section: Items List */}
+                <div className="col-span-3 flex flex-col mb-3">
+                    <h1>Items List</h1>
+                    {formInputData.items.map((item, index) => (
+                        <div
+                            key={index}
+                            className="flex justify-start items-center flex-wrap gap-3"
+                        >
+                            <div className="flex flex-col justify-start items-start">
+                                <label>Item Name</label>
                                 <input
                                     required
-                                    name="paymentDue"
-                                    value={formInputData.paymentDue}
-                                    onChange={handleChange}
-                                    type="date"
-                                    className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
+                                    value={item.name}
+                                    onChange={(e) => handleItemChange(index, "name", e.target.value)}
+                                    placeholder="Item name"
+                                    className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
                                 />
                             </div>
-                            <div className="col-span-1 flex flex-col">
-                                <label>Payment Terms</label>
-                                <select
-                                    name="paymentTerms"
-                                    value={formInputData.paymentTerms}
-                                    onChange={handleChange}
-                                    className="p-3.5 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
-                                >
-                                    {deliveryPeriod.map((period, index) => (
-                                        <option key={index} value={period.value}>
-                                            {period.text}
-                                        </option>
-                                    ))}
-                                </select>
+                            <div className="flex flex-col justify-center items-start">
+                                <label>Quantity</label>
+                                <input
+                                    type="number"
+                                    value={item.quantity}
+                                    onChange={(e) => handleItemChange(index, "quantity", e.target.value)}
+                                    className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.3px]"
+                                />
+                            </div>
+                            <div className="flex flex-col justify-center items-start">
+                                <label>Price</label>
+                                <input
+                                    type="number"
+                                    value={item.price}
+                                    onChange={(e) => handleItemChange(index, "price", e.target.value)}
+                                    className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.3px]"
+                                />
+                            </div>
+                            <div className="flex flex-col justify-start items-start">
+                                <label>Total</label>
+                                <input
+                                    disabled
+                                    placeholder={item.total}
+                                    value={item.total}
+                                    className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.3px]"
+                                />
                             </div>
                         </div>
-                    </div>
+                    ))}
+                </div>
 
-                    {/* Section: Client Details */}
-                    <div className="flex flex-col mt-8">
-                        <label>Client Name</label>
-                        <input
-                            type="text"
-                            name="clientName"
-                            placeholder="Tee"
-                            value={formInputData.clientName}
-                            onChange={handleChange}
-                            className="p-3 border-2 border-gray-700 rounded-md"
-                        />
-                        {error.clientName && <p class="text-xs text-red-700">{error.clientName}</p>}
+                {/* Submit Button */}
+                <div className="flex mt-8 mb-8">
+                    <div className="flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg cursor-pointer bg-slate-700" onClick={clearSubmit}>
+                        <button type='button'>Cancel</button>
                     </div>
-
-                    {/* Section: Description */}
-                    <div className="col-span-3 flex flex-col mb-3">
-                        <label>Description</label>
-                        <input
-                            type="text"
-                            name="description"
-                            placeholder="Description"
-                            value={formInputData.description}
-                            onChange={handleChange}
-                            className="p-3 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
-                        />
-                        {error.description && <p class="text-xs text-red-700">{error.description}</p>}
+                    <div className='flex flex-col w-full items-center justify-center m-2 p-3 text-white rounded-lg bg-[#7c5dfa] cursor-pointer' onClick={handleSubmit}>
+                        <button type='submit'>Submit</button>
                     </div>
-
-                    {/* Section: Items List */}
-                    <div className="col-span-3 flex flex-col mb-3">
-                        <h1>Items List</h1>
-                        {formInputData.items.map((item, index) => (
-                            <div
-                                key={index}
-                                className="flex justify-start items-center flex-wrap gap-3"
-                            >
-                                <div className="flex flex-col justify-start items-start">
-                                    <label>Item Name</label>
-                                    <input
-                                        required
-                                        value={item.name}
-                                        onChange={(e) => handleItemChange(index, "name", e.target.value)}
-                                        placeholder="Item name"
-                                        className="p-2 mt-2 bg-custom-card rounded-md focus:outline-purple-400 border-[.3px]"
-                                    />
-                                </div>
-                                <div className="flex flex-col justify-center items-start">
-                                    <label>Quantity</label>
-                                    <input
-                                        type="number"
-                                        value={item.quantity}
-                                        onChange={(e) => handleItemChange(index, "quantity", e.target.value)}
-                                        className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.3px]"
-                                    />
-                                </div>
-                                <div className="flex flex-col justify-center items-start">
-                                    <label>Price</label>
-                                    <input
-                                        type="number"
-                                        value={item.price}
-                                        onChange={(e) => handleItemChange(index, "price", e.target.value)}
-                                        className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.3px]"
-                                    />
-                                </div>
-                                <div className="flex flex-col justify-start items-start">
-                                    <label>Total</label>
-                                    <input
-                                        disabled
-                                        placeholder={item.total}
-                                        value={item.total}
-                                        className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.3px]"
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="flex mt-8 mb-8">
-                        <div className="flex flex-col items-center justify-center w-full p-3 m-2 text-white rounded-lg cursor-pointer bg-slate-700" onClick={clearSubmit}>
-                            <button type='button'>Cancel</button>
-                        </div>
-                        <div className='flex flex-col w-full items-center justify-center m-2 p-3 text-white rounded-lg bg-[#7c5dfa] cursor-pointer' onClick={handleSubmit}>
-                            <button type='submit'>Submit</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            );
+                </div>
+            </form>
+        </div>
+    );
 };
 
-            export default NewInvoice;
+export default NewInvoice;
