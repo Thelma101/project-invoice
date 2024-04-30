@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// Initial form state
+
 const initialFormState = {
   homeAddress: '',
   city: '',
@@ -42,7 +42,7 @@ const NewInvoice = () => {
 
   // Function to clear the form
   const clearSubmit = () => {
-    setFormInputData(initialFormState); // Reset to initial state
+    setFormInputData(initialFormState); 
   };
 
   // Function to handle form submission
