@@ -33,7 +33,7 @@ const Invoices = () => {
 
                             <div onClick={handleForm} className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer">
                                 {/* <button>onClick={handleForm}</button> */}
-                                <div className='flex absolute left-0'>
+                                <div className='flex absolute left-24 top-0 p-3 '>
                                     {newInvoiceForm && <NewInvoice />}
                                 </div>
 
