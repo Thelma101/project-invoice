@@ -316,7 +316,7 @@ const NewInvoice = () => {
                                     disabled
                                     placeholder={item.total}
                                     value={item.total}
-                                    className="p-2 mt-2 rounded-md bg-custom-card focus:outline-purple-400 border-[.8px]"
+                                    className="p-2 mt-2 rounded-md bg-gray-200 focus:outline-purple-400 border-[.8px]"
                                 />
                             </div>
                         </div>
