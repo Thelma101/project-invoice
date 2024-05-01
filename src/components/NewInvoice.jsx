@@ -41,12 +41,23 @@ const NewInvoice = () => {
         setFormInputData({ ...formInputData, [name]: value });
     };
 
-    // Function to clear the form
+    const handleItemChange = (index, field, value) => {
+        const updatedItems = [...formInputData.items];
+        updatedItems[index][field] = field === "quantity" || field === "price" ? parseFloat(value) : value;
+      
+        // Update 
+        if (field === "quantity" || field === "price") {
+          updatedItems[index].total = updatedItems[index].quantity * updatedItems[index].price;
+        }
+      
+        setFormInputData({ ...formInputData, items: updatedItems });
+      };
+
+    // clear the form
     const clearSubmit = () => {
         setFormInputData(initialFormState);
     };
 
-    // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
         const checkError = {};
@@ -260,7 +271,7 @@ const NewInvoice = () => {
                     {error.description && <p class="text-xs text-red-700">{error.description}</p>}
                 </div>
 
-                <div className="col-span-3 flex flex-col mb-3 mt-8">
+                <div className="col-span-3 flex flex-col mb-3 mt-8 text-[#626161]">
                     <h1 className='text-[#7c5dfa]'>Items List</h1>
                     {formInputData.items.map((item, index) => (
                         <div
