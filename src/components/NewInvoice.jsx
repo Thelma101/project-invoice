@@ -90,8 +90,8 @@ const NewInvoice = () => {
     };
 
     return (
-        <div className='flex items-center justify-center mx-auto text-main-text bg-slate-100'>
-            <form onSubmit={handleSubmit}>
+        <div className='flex items-center justify-center mx-auto text-main-text bg-items-bg'>
+            <form onSubmit={handleSubmit} className='px-10'>
                 <div className="flex flex-col mt-8">
                     <p className="text-[#7c5dfa]">Bill From</p>
                     <label>Street Address</label>
