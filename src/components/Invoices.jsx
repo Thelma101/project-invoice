@@ -31,9 +31,9 @@ const Invoices = () => {
                                 <img src="" alt="" style={dropdownArrowStyle} />
                             </div>
 
-                            <div onClick={handleForm} className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer">
+                            {/* <div onClick={handleForm} className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer">
                                 {/* <button>onClick={handleForm}</button> */}
-                                <div className='flex absolute left-24 top-0 '>
+                                <div className='absolute top-0 flex left-24 '>
                                     {newInvoiceForm && <NewInvoice />}
                                 </div>
 
@@ -43,7 +43,7 @@ const Invoices = () => {
                                 <div className='flex items-center justify-center text-center text-white'>
                                     New&nbsp;<span className='hidden md:block'> Invoice</span>
                                 </div>
-                            </div>
+                            {/* </div>  */}
                         </div>
                     </div>
                 </div>
