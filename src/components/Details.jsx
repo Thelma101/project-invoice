@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import leftArrow from '../assets/icon-arrow-left.svg';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Invoices from './Invoices';
 import { ThemeContext } from './context/ThemeContext';
 
@@ -22,12 +22,9 @@ const Details = () => {
         setInvoices(updatedInvoices);
         alert(`Invoice ${invoiceId} has been deleted`)
         console.log(`Deleted invoice with ID: ${invoiceId}`);
+        useNavigate();
     };
 
-    const handleDelete = (id) => {
-        setValues(values.filter((item) => item.id !== id));
-        navigate("/");
-      };
 
     const handleMarkAsPaid = (invoiceId) => {
         setInvoices(invoices.map(invoice =>
