@@ -228,7 +228,7 @@ const NewInvoice = () => {
                 {/* Section: Payment Terms */}
                 <div className="col-span-3 mt-8">
                     <div className="grid grid-cols-2 gap-2">
-                        <div className="col-span-1 flex flex-col">
+                        <div className="flex flex-col col-span-1">
                             <label>Invoice Date</label>
                             <input
                                 required
@@ -240,7 +240,7 @@ const NewInvoice = () => {
                             />
                             {error.country && <p className="text-xs text-red-700">{error.country}</p>}
                         </div>
-                        <div className="col-span-1 flex flex-col">
+                        <div className="flex flex-col col-span-1">
                             <label>Payment Terms</label>
                             <select
                                 name="paymentTerms"
@@ -258,7 +258,7 @@ const NewInvoice = () => {
                     </div>
                 </div>
                 {/* Section: Description */}
-                <div className="col-span-3 flex flex-col mb-3 mt-8">
+                <div className="flex flex-col col-span-3 mt-8 mb-3">
                     <label>Description</label>
                     <input
                         type="text"
@@ -276,9 +276,9 @@ const NewInvoice = () => {
                     {formInputData.items.map((item, index) => (
                         <div
                             key={index}
-                            className="flex justify-start items-center flex-wrap gap-3"
+                            className="flex flex-wrap items-center justify-start gap-3 text-[#626161]" 
                         >
-                            <div className="flex flex-col justify-start items-start">
+                            <div className="flex flex-col items-start justify-start">
                                 <label>Item Name</label>
                                 <input
                                     required
@@ -289,7 +289,7 @@ const NewInvoice = () => {
                                 />
                             </div>
 
-                            <div className="flex flex-col justify-center items-start">
+                            <div className="flex flex-col items-start justify-center">
                                 <label>Quantity</label>
                                 <input
                                     type="number"
@@ -299,7 +299,7 @@ const NewInvoice = () => {
                                 />
                             </div>
 
-                            <div className="flex flex-col justify-center items-start">
+                            <div className="flex flex-col items-start justify-center">
                                 <label>Price</label>
                                 <input
                                     type="number"
@@ -309,7 +309,7 @@ const NewInvoice = () => {
                                 />
                             </div>
 
-                            <div className="flex flex-col justify-start items-start">
+                            <div className="flex flex-col items-start justify-start">
                                 <label>Total</label>
                                 <input
                                     type="text"

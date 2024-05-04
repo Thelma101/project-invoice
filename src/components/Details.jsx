@@ -11,14 +11,32 @@ const Details = () => {
     const { dataValue } = useContext(ThemeContext);
     const data = dataValue.find(detail => detail.id === id);
 
-    // const [invoices, setInvoices] = useState([]);
+    const [invoices, setInvoices] = useState('data');
+    const handleEdit = (invoiceId) => {
+        console.log(`Edit invoice with ID: ${invoiceId}`);
+
+    };
 
     const handleDelete = (invoiceId) => {
         const updatedInvoices = invoices.filter(invoice => invoice.id !== invoiceId);
         setInvoices(updatedInvoices);
+        alert(`Invoice ${invoiceId} has been deleted`)
         console.log(`Deleted invoice with ID: ${invoiceId}`);
     };
-    
+
+    const handleDelete = (id) => {
+        setValues(values.filter((item) => item.id !== id));
+        navigate("/");
+      };
+
+    const handleMarkAsPaid = (invoiceId) => {
+        setInvoices(invoices.map(invoice =>
+            invoice.id === invoiceId ? { ...invoice, status: 'Paid' } : invoice
+        ));
+        alert(`invoice ${invoiceId} edited `)
+        console.log(`Invoice ${invoiceId} marked as paid.`);
+    };
+
 
     return (
         <div className='mx-28 md:mx-[300px]'>
@@ -41,11 +59,27 @@ const Details = () => {
                                 <p className="text-sm font-light text-white">{data.status}</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-3">
+                        {/* <div className="flex items-center gap-3">
                             <button onClick={handleEdit} className="px-3 py-1 text-sm text-gray-500 bg-gray-300 rounded-full">Edit</button>
                             <button onClick={handleDelete} className="px-3 py-1 text-sm text-white bg-red-500 rounded-full">Delete</button>
                             <button onClick={handleMarkAsPaid} className="hidden px-3 py-1 text-sm text-white bg-purple-400 rounded-full md:block">Mark as Paid</button>
+                        </div> */}
+
+                        <div className="flex items-center gap-3">
+                            <button onClick={() => handleEdit(invoice.id)} className="px-3 py-1 text-sm text-gray-500 bg-gray-300 rounded-full">
+                                Edit
+                            </button>
+                            <button onClick={() => handleDelete(invoice.id)} className="px-3 py-1 text-sm text-white bg-red-500 rounded-full">
+                                Delete
+                            </button>
+                            <button
+                                onClick={() => handleMarkAsPaid(invoice.id)}
+                                className="px-3 py-1 text-sm text-white bg-purple-400 rounded-full"
+                            >
+                                Mark as Paid
+                            </button>
                         </div>
+
                     </div>
                 </div>
             </div>
