@@ -9,17 +9,14 @@ import { ThemeContext } from './context/ThemeContext';
 const Details = () => {
     const { id } = useParams();
     const { dataValue } = useContext(ThemeContext);
-    const data = dataValue.find(detail => detail.id === id);
+    const navigate = useNavigate();
+    const [invoices, setInvoices] = useState(dataValue);
+    const data = invoices.find(detail => detail.id === id);
 
-    const [invoices, setInvoices] = useState('data');
-    const handleEdit = (invoiceId) => {
-        console.log(`Edit invoice with ID: ${invoiceId}`);
-
-    };
 
     const handleEdit = (invoiceId) => {
         console.log(`Edit invoice with ID: ${invoiceId}`);
-        navigate(`/edit/${invoiceId}`); // Redirect to the edit page
+        navigate(`/${invoiceId}`); 
     };
 
     const handleDelete = (invoiceId) => {
@@ -27,8 +24,10 @@ const Details = () => {
         if (isConfirmed) {
             const updatedInvoices = invoices.filter(invoice => invoice.id !== invoiceId);
             setInvoices(updatedInvoices);
+            alert
+            // Perform any additional actions, such as sending a request to the server to delete the invoice
             console.log(`Deleted invoice with ID: ${invoiceId}`);
-            navigate('/'); // Navigate back after deletion
+            navigate('/');
         }
     };
 
@@ -69,14 +68,10 @@ const Details = () => {
                         </div> */}
 
                         <div className="flex items-center gap-3">
-                            <button onClick={() => handleEdit(invoice.id)} className="px-3 py-1 text-sm text-gray-500 bg-gray-300 rounded-full">
-                                Edit
-                            </button>
-                            <button onClick={() => handleDelete(invoice.id)} className="px-3 py-1 text-sm text-white bg-red-500 rounded-full">
-                                Delete
-                            </button>
+                            <button onClick={() => handleEdit(id)} className="px-3 py-1 text-sm text-gray-500 bg-gray-300 rounded-full">Edit</button>
+                            <button onClick={() => handleDelete(id)} className="px-3 py-1 text-sm text-white bg-red-500 rounded-full">Delete</button>
                             <button
-                                onClick={() => handleMarkAsPaid(invoice.id)}
+                                onClick={() => handleMarkAsPaid(id)}
                                 className="px-3 py-1 text-sm text-white bg-purple-400 rounded-full"
                             >
                                 Mark as Paid
