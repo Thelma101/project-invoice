@@ -22,7 +22,7 @@ const Invoices = () => {
             return newState;
         });
     };
-    
+
 
     return (
         <div className='bg-main-bg'>
@@ -52,7 +52,7 @@ const Invoices = () => {
                                 <div className='flex items-center justify-center text-center text-white'>
                                     New&nbsp;<span className='hidden md:block'> Invoice</span>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -44,14 +44,14 @@ const NewInvoice = () => {
     const handleItemChange = (index, field, value) => {
         const updatedItems = [...formInputData.items];
         updatedItems[index][field] = field === "quantity" || field === "price" ? parseFloat(value) : value;
-      
+
         // Update 
         if (field === "quantity" || field === "price") {
-          updatedItems[index].total = updatedItems[index].quantity * updatedItems[index].price;
+            updatedItems[index].total = updatedItems[index].quantity * updatedItems[index].price;
         }
-      
+
         setFormInputData({ ...formInputData, items: updatedItems });
-      };
+    };
 
     // clear the form
     const clearSubmit = () => {
@@ -276,7 +276,7 @@ const NewInvoice = () => {
                     {formInputData.items.map((item, index) => (
                         <div
                             key={index}
-                            className="flex flex-wrap items-center justify-start gap-3 text-[#626161]" 
+                            className="flex flex-wrap items-center justify-start gap-3 text-[#626161]"
                         >
                             <div className="flex flex-col items-start justify-start">
                                 <label>Item Name</label>
