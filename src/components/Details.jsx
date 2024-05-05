@@ -16,7 +16,7 @@ const Details = () => {
 
     const handleEdit = (invoiceId) => {
         console.log(`Edit invoice with ID: ${invoiceId}`);
-        navigate(`/${invoiceId}`); 
+        navigate(`/${invoiceId}`);
     };
 
     const handleDelete = (invoiceId) => {
@@ -24,19 +24,22 @@ const Details = () => {
         if (isConfirmed) {
             const updatedInvoices = invoices.filter(invoice => invoice.id !== invoiceId);
             setInvoices(updatedInvoices);
-            alert
-            // Perform any additional actions, such as sending a request to the server to delete the invoice
+            alert(`Invoice ${invoiceId} has been deleted.`)
             console.log(`Deleted invoice with ID: ${invoiceId}`);
             navigate('/');
         }
     };
 
     const handleMarkAsPaid = (invoiceId) => {
-        const updatedInvoices = invoices.map(invoice =>
-            invoice.id === invoiceId ? { ...invoice, status: 'Paid' } : invoice
-        );
-        setInvoices(updatedInvoices);
-        console.log(`Invoice ${invoiceId} marked as paid.`);
+        const isConfirmed = confirm(`Are you sure you want to mark invoice ${invoiceId} as paid?`);
+        if (isConfirmed) {
+            const updatedInvoices = invoices.map(invoice =>
+                invoice.id === invoiceId ? { ...invoice, status: 'Paid' } : invoice
+            );
+            setInvoices(updatedInvoices);
+            alert(`Invoice ${invoiceId} marked as paid.`)
+            console.log(`Invoice ${invoiceId} marked as paid.`);
+        }
     };
 
 
