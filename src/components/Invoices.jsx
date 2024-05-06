@@ -28,9 +28,10 @@ const Invoices = () => {
         <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
                 <div className='flex justify-between w-3/5'>
-                    <div className="flex items-center justify-between w-full">
-                        <div className="items-center justify-between">
-                            <h2 className="text-4xl font-bold text-white">Invoice</h2>
+                    <div className="flex items-center justify-between w-3/5 mx-auto">
+                        <div className="flex items-center justify-between">
+                            <h2 className="hidden text-4xl font-bold text-white md:block ">Invoice</h2>
+                            <p className="text-2xl font-bold text-white md:hidden">Invoice</p>
                             {/* <p className="hidden text-gray-500 md:block">There are 7 invoices</p>
                     <p className="text-gray-500 md:hidden">7 invoices</p> */}
                         </div>
