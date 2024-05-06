@@ -28,7 +28,7 @@ const Invoices = () => {
         <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
                 <div className='flex justify-between w-3/5'>
-                    <div className="flex items-center justify-between w-3/5 mx-auto">
+                    <div className="flex items-center justify-between w-full mx-auto md:w-4/5">
                         <div className="flex items-center justify-between">
                             <h2 className="hidden text-4xl font-bold text-white md:block ">Invoice</h2>
                             <p className="text-2xl font-bold text-white md:hidden">Invoice</p>
@@ -59,11 +59,11 @@ const Invoices = () => {
                 </div>
 
 
-                <div className="mx-12 md:mx-48">
+                <div className="mx-auto">
                     {dataValue.map((value) => (
                         <Link to={`/${value.id}`} key={value.id}>
-                            <div className="md:mx-auto mt-10 mb-6 rounded-lg bg-card-bg border-2 border-bd-colour hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
-                                <div className="flex flex-col items-center justify-center pt-3 pb-[70px] md:p-3 md:justify-between md:flex-row">
+                            <div className=" md:mx-auto mt-10 mb-6 rounded-lg bg-card-bg border-2 border-bd-colour hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
+                                <div className="flex flex-col items-center pt-3 pb-[70px] md:p-3 justify-between md:flex-row">
                                     <div className="flex flex-col gap-12 md:flex-row">
                                         <div className="hidden font-bold text-text-access md:block ">{value.id}</div>
                                         <div className="hidden md:flex text-slate-400">Due {value.paymentDue}</div>
