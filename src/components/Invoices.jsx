@@ -58,7 +58,6 @@ const Invoices = () => {
                     </div>
                 </div>
 
-
                 <div className="mx-auto">
                     {dataValue.map((value) => (
                         <Link to={`/${value.id}`} key={value.id}>
