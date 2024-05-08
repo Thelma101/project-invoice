@@ -90,7 +90,6 @@ const Invoices = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </Link>
 
                     ))}
