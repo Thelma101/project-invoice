@@ -5,7 +5,6 @@ import Invoices from './Invoices';
 import { ThemeContext } from './context/ThemeContext';
 
 
-
 const Details = () => {
     const { id } = useParams();
     const { dataValue } = useContext(ThemeContext);
