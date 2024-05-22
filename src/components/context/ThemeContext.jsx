@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { dataInvoice } from "../Data";
 
-
 export const ThemeContext = createContext({
     theme: "dark",
     toggleTheme: () => {},
