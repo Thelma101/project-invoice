@@ -12,7 +12,7 @@ export const Provider = ({ children }) => {
     const [dataValue, setDataValue] = useState(dataInvoice);
 
     const toggleTheme = () =>{
-        // setTheme(theme === "light" ? "dark" : "light");
+
         setTheme(theme === "dark" ? "light" : "dark");
     }
 
