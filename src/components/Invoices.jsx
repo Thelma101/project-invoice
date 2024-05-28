@@ -64,9 +64,7 @@ const Invoices = () => {
                     {dataValue.map((value) => (
                         <Link to={`/${value.id}`} key={value.id}>
                             <div className=" md:mx-auto mt-10 mb-6 rounded-lg bg-card-bg border-2 border-bd-colour hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center">
-                            {/* <div className=" md:hidden mt-10 mb-6 rounded-lg bg-card-bg border-2 border-bd-colour hover:cursor-pointer  hover:border-[#7c5dfa] hover:border-2 justify-center"> */}
-                                <div className="md:flex flex-col items-center pt-3 pb-[70px] md:p-3 justify-between md:flex-row ">
-                                <div className="md:hidden flex-col items-center pt-3 pb-[70px] md:p-3 justify-between md:flex-row ">
+                                <div className="flex flex-col items-center pt-3 pb-[70px] md:p-3 justify-between md:flex-row ">
                                     <div className="flex flex-col gap-12 md:flex-row">
                                         <div className="hidden font-bold text-text-access md:block ">{value.id}</div>
                                         <div className="hidden md:flex text-slate-400">Due {value.paymentDue}</div>
@@ -93,7 +91,6 @@ const Invoices = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </Link>
 
