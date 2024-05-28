@@ -23,12 +23,14 @@ const Invoices = () => {
         });
     };
 
-
+    // v1-responsiveness
     return (
         <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
-                <div className='flex justify-between w-3/5'>
-                    <div className="flex items-center justify-between w-full mx-auto md:w-4/5">
+                <div className='flex justify-between w-3/5 sm:w-1/2 md:w-4/5 lg:w-3/4'>
+                    {/* <div className="flex items-center justify-between w-full mx-auto md:w-4/5 sm:w-2/4"> */}
+                    <div className="flex items-center justify-between w-full mx-auto sm:w-1/2 md:w-4/5 lg:w-3/4">
+
                         <div className="flex items-center justify-between">
                             <h2 className="hidden text-4xl font-bold text-white md:block ">Invoice</h2>
                             <p className="text-2xl font-bold text-white md:hidden">Invoice</p>
