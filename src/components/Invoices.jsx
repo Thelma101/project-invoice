@@ -42,7 +42,6 @@ const Invoices = () => {
                                 <p className="text-[12px] text-white w-full"> Filter <span className='hidden md:block'>  by status </span></p>
                                 <img src="" alt="" style={dropdownArrowStyle} />
                             </div>
-
                             <div onClick={handleForm} className=" bg-[#7c5dfa] w-[5rem] h-[2rem] md:w-[10rem] md:h-[3rem] rounded-full flex items-center justify-evenly text-white cursor-pointer">
                                 {/* <button>onClick={handleForm}</button> */}
                                 <div className='absolute top-0 flex left-24 '>
