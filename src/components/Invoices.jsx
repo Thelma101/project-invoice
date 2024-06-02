@@ -70,7 +70,6 @@ const Invoices = () => {
                                         <div className="hidden md:flex text-slate-500">{value.clientEmail}</div>
                                         <div className="text-slate-500 absolute flex right-[140px] md:hidden">{value.clientEmail}</div>
                                     </div>
-
                                     <div className="flex items-start justify-start gap-4 md:items-center md:justify-center">
                                         <div className="hidden pl-2 text-2xl font-bold text-text-access md:flex">$</div>
                                         <div className="font-bold text-text-access absolute md:hidden mt-10 text-sm flex left-[140px]">$</div>
