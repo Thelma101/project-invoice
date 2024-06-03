@@ -23,7 +23,8 @@ const Invoices = () => {
         });
     };
 
-    // v1-mobile-responsiveness
+    // 
+    \}
     return (
         <div className='bg-main-bg'>
             <div className="flex flex-col items-center justify-center pt-20">
