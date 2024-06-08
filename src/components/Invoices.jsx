@@ -97,6 +97,7 @@ const Invoices = () => {
     );
 }
 
+
 // Inline style for dropdown arrow
 const dropdownArrowStyle = {
     border: 'solid #7c5dfa',
